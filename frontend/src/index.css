@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Geomini:wght@200..800&family=Metrophobic&family=Monsieur+La+Doulaise&family=Tangerine:wght@400;700&family=Trocchi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Geomini:wght@200..800&family=Metrophobic&family=Tangerine:wght@400;700&family=Trocchi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Geomini:wght@200..800&family=Metrophobic&family=Monsieur+La+Doulaise&family=Tangerine:wght@400;700&family=Trocchi&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "cormorant-garamond", 'sans-serif';
+  --breakpoint-3xl: 1920px;
+  --color-primary: #8dff69;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-display);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  => This is for macOs system*/
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+    background-color: rgb(230, 234, 236);
+    color: rgb(255, 255, 255);
+    overflow-x: hidden;
+  }
+
+  .fashion-font {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .paragraph-font {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* lookbook creation  */
+
+  /* Container fills the full viewport area */
+  .full-page-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows rows to wrap gracefully */
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+    background-color: rgb(241, 225, 204);
+  }
+
+  /* Base item styling */
+  .gallery-item {
+    position: relative;
+    flex: 1 1 auto;
+    /* Grow and shrink to completely fill empty spaces */
+    overflow: hidden;
+    height: calc(50vh - 15px);
+    /* Forces a 2-row layout grid */
+  }
+
+  /* Conditional sizing adjustments based on state classes */
+  .gallery-item.landscape {
+    min-width: 40%;
+    /* Gives landscape photos a wider footprint */
+  }
+
+  .gallery-item.portrait {
+    min-width: 25%;
+    /* Keeps portrait photos narrower */
+  }
+
+  /* Magic logic that fills the container completely without distortion */
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Crops cleanly to eliminate blank spaces */
+    transition: transform 0.3s ease;
+  }
+
+  /* Minimalist state badge overlay */
+  .orientation-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(243, 239, 239, 0.6);
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    text-transform: capitalize;
+  }
+
+
+  /* custom Scroll-bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(13, 240, 51);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgb(81, 233, 81), rgb(115, 235, 115));
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgb(115, 190, 115), rgb(156, 240, 156));
+  }
+
+  /* Firefox Scroll-bar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(2, 104, 2) rgb(1, 20, 8);
+  }
+
+  /* Hide scroll-bar for exibition */
+  .hide-scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      opacity: 0.3;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+  }
+
+  /* Utility Classes */
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-pulse {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+
+
+
+  }
+
+  /* line clamp */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
