@@ -11,11 +11,10 @@ const Home = () => {
   return (
     <div >
       <Navbar />
-      <main  >
+      <main className='lg:pb-[1vh] pb-[150vh]' >
         <Hero />
         <About />
         <Lookbook />
-        
       </main>
       <Footer />
     </div>
@@ -24,4 +23,4 @@ const Home = () => {
 }
 
 export default Home
-// className='pb-[0vh]'
+// 

@@ -26,9 +26,9 @@ const Lookbook = () => {
 
 
     return (
-        <section className='relative bg-amber-50 min-h-[90vh] '>
+        <section className='relative bg-amber-50 min-h-[90vh] justify-center'>
             <div className='relative max-w-7xl w-fill '>
-                <div>
+                <div className='grid grid-cols-1 items-center'>
                     <div className='flex justify-between '>
                         <div className='text-left mt-20 mb-20 ml-5'>
                         <p className='paragraph-font   uppercase text-xs text-amber-500 '>Visual story</p>
