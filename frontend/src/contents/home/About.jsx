@@ -10,12 +10,12 @@ const About = () => {
           <div className='flex flex-col items-center pt-6' >
             <div className='border border-amber-500 w-30' />
             <div className='flex items-center gap-1 p-20'>
-              <Quote className='w-20 h-20 text-gray-900 mb-120 lg:w-20 lg:h-20 lg:mb-50' />
+              <Quote className='w-15 h-15 text-gray-900 mb-120 lg:w-20 lg:h-20 lg:mb-50' />
               <div className='leading-relaxed '>
                 <p className='fashion-font text-7xl text-gray-900 font-light'>{MAIN_INFO.paragraph2[0]}</p>
                 <p className='fashion-font text-7xl text-gray-900 font-light'>{MAIN_INFO.paragraph2[1]}</p>
               </div>
-              <Quote className='w-20 h-20 text-gray-900 mt-120 lg:w-20 lg:h-20 lg:mt-50' />
+              <Quote className='w-15 h-15 text-gray-900 mt-129 lg:w-20 lg:h-20 lg:mt-50' />
             </div>
 
             <div className='border border-amber-500 w-30' />

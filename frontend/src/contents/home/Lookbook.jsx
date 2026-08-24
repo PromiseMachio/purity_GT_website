@@ -37,14 +37,14 @@ const Lookbook = () => {
                     <div className='text-base mt-20 mb-20 pr-10'>
                        <button
                        onClick={()=>navigate('/collection')}
-                       className=' border-b border-gray-900 text-sm text-black uppercase py-0 hover:text-amber-500 hover:border-amber-500'>
+                       className='hidden sm:block border-b border-gray-900 text-black uppercase py-0 hover:text-amber-500 hover:border-amber-500'>
                         View All
                     </button> 
                     </div>
                     
                     </div>
                     
-                    <div className="full-page-gallery">
+                    <div className="relative full-page-gallery">
                         {images.map((image) => (
                             <div
                                 key={image.id}
@@ -59,6 +59,12 @@ const Lookbook = () => {
                                 <span className="orientation-badge">{image.orientation}</span>
                             </div>
                         ))}
+
+                        <button
+                        onClick={()=> navigate('/collection')}
+                        className='md:hidden absolute  right-1.5 bottom-1.5 mr-4 w-15 h-15 rounded-4xl bg-white/60 text-black animate-bounce transition-all duration-300  hover:animate-none hover:bg-amber-300  '>
+                            More 👇
+                        </button>
                     </div>
                 </div>
             </div>
@@ -70,4 +76,4 @@ export default Lookbook
 
 
 
-{/* Optional metadata overlay showing the captured state */ }
+{/*top-3/4 left-3/4 Optional metadata overlay showing the captured state */ }
