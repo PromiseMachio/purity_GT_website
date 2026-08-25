@@ -77,14 +77,14 @@
     width: 80%;
     height: 80%;
     object-fit: fill;
-    /* Crops cleanly to eliminate blank spaces */
+  
     transition: transform 0.3s ease;
 
   }
-
-  .gallery-item img:hover{
-    transition: transform 0.5s ease-out;
-  }
+  /* Crops cleanly to eliminate blank spaces */
+  /* .gallery-item:hover{
+    scale: 1.5;
+  } */
 
   /* Minimalist state badge overlay */
   .orientation-badge {

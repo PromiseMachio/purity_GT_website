@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div >
       <Navbar />
-      <main className='lg:pb-[1vh] pb-[200vh]' >
+      <main className='lg:pb-[1vh] pb-[205vh]' >
         <Hero />
         <About />
         <Aboutme />

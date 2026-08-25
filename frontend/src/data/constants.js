@@ -19,8 +19,10 @@ import image5 from '../assets/lookImg5.jpg'
 import aboutme from '../assets/aboutImage1.png'
 import aboutMe from '../assets/aboutImage2.png'
 
+
 // Importing crafting images
 import craftBg from '../assets/sectionBackgroundImg1.png'
+import craftingBgImg from '../assets/craftingBGimage.jpg'
 
 export const NAV_LINKS=[
     {id:'collection', label:'Collection' },
@@ -135,12 +137,15 @@ export const FOOTER_CONTENT=[
 
 export const CRAFTING_CONTENT = {
     backgroundImg:craftBg,
+    image:craftingBgImg,
     name:[
         'CRAFTED',
         'WITH',
         'PRECISION.'
     ],
-    paragraph:'Every stitch, seam and detail is finished with care. We believe that true luxury lives in the details most people never see.',
+    paragraph:['Every stitch, seam and detail is finished with care. We',
+         'believe that true luxury lives in the details most people',
+          'never see.'],
     stamp:''
     
 

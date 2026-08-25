@@ -1,6 +1,7 @@
 import React from 'react'
 import { FOOTER_CONTENT, NAV_LINKS } from '../data/constants'
 import { useNavigate } from 'react-router-dom'
+import { Heart } from 'lucide-react'
 
 const Footer = () => {
     const navigate = useNavigate()
@@ -56,6 +57,20 @@ const Footer = () => {
                         <p className='hover:text-white transition-colors'>+254 700 000 000</p>
                         <p>Kakamega, Kenya</p>
                     </div>
+
+                </div>
+                <div className='border border-gray-600 w-full lg:w-auto space-y-4 mt-10' />
+                <div className='flex flex-col lg:flex-row items-center justify-between mt-5'>
+                    <div className='text-xs text-gray-700 leading-0 tracking-tight'>
+                        <p>© 2026 Purity Bespoke Fashion. All rights reserved.</p>
+                    </div>
+                    <div className=' flex gap-2 text-xs text-gray-700 leading-0 tracking-tight p-6' >
+                        <p className='mt-3' >Created with</p> <Heart className='text-red-600 w-6 h-6 mt-0.5 mb-1.5 animate-pulse' fill='currentColor' /><p className='mt-3'> Arauna </p>
+                    </div>
+                    <div className='text-xs text-gray-700 leading-0 tracking-tight'>
+                        <p>Crafted with precision — Nairobi, Kenya</p>
+                    </div>
+
 
                 </div>
             </div>
