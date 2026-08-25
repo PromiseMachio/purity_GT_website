@@ -7,7 +7,7 @@ const Craft = () => {
             <div className='relative z-10 max-w-7xl sm:px-6 lg:py-10 w-full'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 items-center pl-3 '>
                     {/* left side  */}
-                    <div className='text-left space-y-4'>
+                    <div className='text-left space-y-4 mt-5'>
                         <div className='border border-amber-500 w-25' />
                         <div className=' text-7xl font-semibold text-white space-y-2' >
                             <p>{CRAFTING_CONTENT.name[0]}</p>
