@@ -48,7 +48,7 @@
     padding: 10px;
     box-sizing: border-box;
     gap: 10px;
-    background-color: rgb(241, 225, 204);
+    background-color: #fff;
   }
 
   /* Base item styling */
@@ -74,11 +74,12 @@
 
   /* Magic logic that fills the container completely without distortion */
   .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 80%;
+    height: 80%;
+    object-fit: fill;
     /* Crops cleanly to eliminate blank spaces */
     transition: transform 0.3s ease;
+
   }
 
   .gallery-item img:hover{

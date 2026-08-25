@@ -1,16 +1,26 @@
 import icon from '../assets/flower_icon.jpg'
 import heroImg from '../assets/heroImage.png'
 
+
 // images for lookbook 
 import img1 from '../assets/look1.jpg'
 import img2 from '../assets/look2.jpg'
 import img3 from '../assets/look3.jpg'
 import img4 from '../assets/look4.jpg'
 import img5 from '../assets/look5.jpg'
+import image1 from '../assets/lookImg1.jpg'
+import image2 from '../assets/lookImg2.jpg'
+import image3 from '../assets/lookImg3.jpg'
+import image4 from '../assets/lookImg4.jpg'
+import image5 from '../assets/lookImg5.jpg'
+
 
 // Import images for about me
 import aboutme from '../assets/aboutImage1.png'
 import aboutMe from '../assets/aboutImage2.png'
+
+// Importing crafting images
+import craftBg from '../assets/sectionBackgroundImg1.png'
 
 export const NAV_LINKS=[
     {id:'collection', label:'Collection' },
@@ -109,10 +119,12 @@ export const PROCESS={
 
 export const LOOKBOOK_CONTENT=[
     {id:1,image:img1}, 
-    {id:2,image:img2},
-    {id:3,image:img3},
-    {id:4,image:img4}, 
-    {id:5,image:img5}
+    {id:6,image:image1},
+    {id:7,image:image2},
+    {id:8,image:image3},
+    {id:9,image:image4},
+    {id:10,image:image5},
+
 ]
 
 export const FOOTER_CONTENT=[
@@ -120,3 +132,17 @@ export const FOOTER_CONTENT=[
     {label:'Facebook', url:'https://...'},
     {label:'Tiktok', url:'https://...'}
 ]
+
+export const CRAFTING_CONTENT = {
+    backgroundImg:craftBg,
+    name:[
+        'CRAFTED',
+        'WITH',
+        'PRECISION.'
+    ],
+    paragraph:'Every stitch, seam and detail is finished with care. We believe that true luxury lives in the details most people never see.',
+    stamp:''
+    
+
+
+}
