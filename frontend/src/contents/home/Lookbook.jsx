@@ -60,11 +60,11 @@ const Lookbook = () => {
                             </div>
                         ))}
 
-                        <button
+                        {/* <button
                         onClick={()=> navigate('/collection')}
                         className='md:hidden absolute  right-1.5 bottom-1.5 mr-4 w-15 h-15 rounded-4xl bg-white/60 text-black animate-bounce transition-all duration-300  hover:animate-none hover:bg-amber-300  '>
                             More 👇
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </div>

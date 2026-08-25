@@ -4,8 +4,8 @@ import { Quote } from 'lucide-react'
 
 const About = () => {
   return (
-    <section className='relative min-h-[90vh] w-full bg-amber-200 flex items-center justify-center'>
-      <div className='max-w-7xl w-full items-center'>
+    <section className='relative min-h-[90vh]  bg-amber-200 flex items-center overflow-hidden'>
+      <div className='max-w-7xl z-10 w-full mx-auto sm:px-6 lg:px-8 items-center'>
         <div className='grid grid-cols-1'>
           <div className='flex flex-col items-center pt-6' >
             <div className='border border-amber-500 w-30' />
