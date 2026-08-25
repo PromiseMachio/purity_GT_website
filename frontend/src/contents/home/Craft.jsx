@@ -31,9 +31,9 @@ const Craft = () => {
 
                     </div>
                      {/* right side  */}
-                     <div className='relative w-100 h-120  p-5 overflow-hidden mb-5 mt-2  max-w-md transition-transform duration-300 hover:scale-100 '>
+                     <div className='relative w-100 h-120  p-5 overflow-hidden mb-5 mt-2 mr-3  max-w-md transition-transform duration-300 hover:scale-100 '>
                         <img 
-                        className=' absolute inset-0  bg-gradient-to-t from-black/80 via-black/30 to-transparent  w-100 h-120  object-cover  transition-transform duration-300 hover:scale-100'
+                        className=' absolute inset-0  bg-gradient-to-t from-black/80 via-black/30 to-transparent  w-96 h-120 mr-3  object-cover  transition-transform duration-300 hover:scale-100'
                         src={CRAFTING_CONTENT.image} alt="" />
                         
                      </div>
