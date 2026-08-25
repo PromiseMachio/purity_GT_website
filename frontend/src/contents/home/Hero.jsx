@@ -35,7 +35,7 @@ const Hero = () => {
                         </div>
 
                         {/* buttons  */}
-                        <div className='flex flex-col lg:flex-row gap-4 items-center mt-6 w-full'>
+                        <div className='flex flex-col lg:flex-row gap-4 items-center mt-6 w-full pr-1.5'>
                             <button
                                 onClick={() => navigate('/collection')}
                                 className='w-full lg:w-auto uppercase paragraph-font py-3 px-8 border border-black text-sm bg-white/90 text-black transition-all duration-300 hover:bg-amber-500 hover:text-white hover:border-white'
