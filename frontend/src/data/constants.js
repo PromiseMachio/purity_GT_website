@@ -8,6 +8,10 @@ import img3 from '../assets/look3.jpg'
 import img4 from '../assets/look4.jpg'
 import img5 from '../assets/look5.jpg'
 
+// Import images for about me
+import aboutme from '../assets/aboutImage1.png'
+import aboutMe from '../assets/aboutImage2.png'
+
 export const NAV_LINKS=[
     {id:'collection', label:'Collection' },
     {id:'process', label:'Process'},
@@ -25,6 +29,18 @@ export const MAIN_INFO={
     paragraph2:["Fashion isn't just what you wear.", 
         "It's how you feel wearing it."],
     paragraph3:["At Purity, every garment is thoughtfully designed, carefully tailored and made", "to feel uniquely yours."]
+}
+// About me 
+export const ABOUTME={
+    name:['MEET', 'PURITY'],
+    intro:'The Designer',
+    paragraph:[
+        "Purity is a fashion designer and tailor passionate about creating elegant, well-fitted garments that reflect each client's individuality. From the first idea to the final stitch, every piece receives careful attention to detail.",
+        "With roots in African textile traditions and a modern eye for silhouette and structure, Purity creates garments that honour both heritage and contemporary elegance."
+    ],
+    description:"Creating garments that feel as beautiful as they look.",
+    image1:aboutme,
+    image2:aboutMe
 }
 
 export const SERVICES={

@@ -54,6 +54,7 @@ const Lookbook = () => {
                                     src={image.image}
                                     alt="Gallery item"
                                     onLoad={(e) => handleImageLoad(image.id, e)}
+                                    className='w-full h-full object-cover'
                                 />
 
                                 <span className="orientation-badge">{image.orientation}</span>
