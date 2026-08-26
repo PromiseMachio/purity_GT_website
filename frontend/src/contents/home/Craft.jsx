@@ -1,5 +1,6 @@
 import React from 'react'
 import { CRAFTING_CONTENT } from '../../data/constants'
+import { Sparkles, Shirt, ScissorsIcon } from 'lucide-react'
 
 const Craft = () => {
     return (
@@ -9,13 +10,13 @@ const Craft = () => {
                     {/* left side  */}
                     <div className='text-left space-y-4 mt-5'>
                         <div className='border border-amber-500 w-25' />
-                        <div className=' text-7xl font-semibold text-white space-y-2' >
+                        <div className=' sm:text-7xl text-5xl font-semibold text-white space-y-2' >
                             <p>{CRAFTING_CONTENT.name[0]}</p>
                             <p>{CRAFTING_CONTENT.name[1]}</p>
                             <p>{CRAFTING_CONTENT.name[2]}</p>
                         </div>
 
-                        <div className='text-lg paragraph-font text-gray-600 text-based leading-relaxed tracking-normal'>
+                        <div className='sm:text-lg text-2xl paragraph-font sm:text-gray-800 text-gray-800  font-normal leading-relaxed tracking-normal'>
                             <p >{CRAFTING_CONTENT.paragraph[0]}</p>
                             <p >{CRAFTING_CONTENT.paragraph[1]}</p>
                             <p >{CRAFTING_CONTENT.paragraph[2]}</p>
@@ -30,16 +31,35 @@ const Craft = () => {
                         </div>
 
                     </div>
-                     {/* right side  */}
-                     <div className='relative w-100 h-120  p-5 overflow-hidden mb-5 mt-2 mr-3  max-w-md transition-transform duration-300 hover:scale-100 '>
-                        <img 
-                        className=' absolute inset-0  bg-gradient-to-t from-black/80 via-black/30 to-transparent  w-96 h-120 mr-3  object-cover  transition-transform duration-300 hover:scale-100'
-                        src={CRAFTING_CONTENT.image} alt="" />
-                        
-                     </div>
-                     
+                    {/* right side  */}
+                    <div className='relative'>
+                        <div className='relative overflow-hidden rounded-2xl aspect-4.5 max-w-125 ml-auto group'>
+                            <div className='absolute inset-0 rounded-2xl overflow-hidden'>
+                               <div className='absolute inset-0.5 bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 animate-spin-slow rounded-2xl'>
+                            </div> 
+                            </div>
+                            
+                            <div className='relative rounded-2xl overflow-hidden m-px h-[calc(1005-2px)] transition-transform duration-300 hover:scale-105'>
+                                <img
+                                    className='w-[750px] h-[600px] object-cover'
+                                    src={CRAFTING_CONTENT.image} alt="" />
+                                <div className="absolute bottom-5 left-5 flex h-12 w-30 items-center justify-center rounded-2xl py-4 gap-3 bg-white/20 backdrop-blur-md">
+                                    <div className=''>
+                                        <Sparkles className="h-5 w-5 text-white transition-all duration-300 hover:text-amber-300 hover:fill-amber-300 " />
+                                    </div>
+                                    <div>
+                                        <Shirt className='h-5 w-5 text-blue-500 transition-all duration-300 hover:fill-blue-500' />
+                                    </div>
+                                    <div>
+                                        <ScissorsIcon className='h-5 w-5 text-black transition-all duration-300 hover:text-red-500' />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div>
+
 
                     </div>
                 </div>
