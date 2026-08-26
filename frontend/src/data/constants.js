@@ -1,5 +1,6 @@
 import icon from '../assets/flower_icon.jpg'
 import heroImg from '../assets/heroImage.png'
+import Herologo from '../assets/collection/collectionLogo.png'
 
 
 // images for lookbook 
@@ -32,6 +33,7 @@ export const NAV_LINKS=[
 //  name:'Touch Of Purity';
 export const MAIN_INFO={
     logo:icon,
+    logo2:Herologo,
     name:['TOUCH', 'OF', 'PURITY'],
     backgroundImg:heroImg,
     description:'Bespoke Fashion',
