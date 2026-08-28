@@ -27,7 +27,7 @@ const Colnavbar = () => {
                 {/* logo  */}
                 <div className='flex items-center gap-1'>
                     <span className='uppercase text-5xl text-amber-900 font-extrabold mask-b-from-neutral-900 '>{NAVBAR.name}</span>
-                    <img src={NAVBAR.navLogo} alt="" className='w-15 h-15' />
+                    <img src={isScroll?NAVBAR.navLogo:NAVBAR.navLogo2} alt="" className='w-15 h-15' />
 
                 </div>
 

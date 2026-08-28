@@ -1,8 +1,10 @@
 import React from 'react'
 import { COLLECTION_MAIN_INFO } from '../../data/collectionConstants'
 import { ArrowBigDown } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const Colhero = () => {
+    const navigate = useNavigate()
     return (
         <section className='relative min-h-[90vh] overflow-hidden z-10 bg-white flex gap-12 items-center justify-center pt-20'>
             <div className='relative max-w-7xl w-full items-center sm:px-6 lg:py-10'>
@@ -18,13 +20,15 @@ const Colhero = () => {
 
                         </div>
                         <p className='text-4xl fashion-font foont-normal text-cyan-400'>{COLLECTION_MAIN_INFO.tagline}</p>
-                        <div className='text-lg lg:text-2xl paragraph-font text-gray-700 leading-relaxed tracking-wide font-normal mb-7'>
+                        <div className='text-lg lg:text-lg paragraph-font text-gray-700 leading-relaxed tracking-tight font-normal mb-7'>
                             <p>{COLLECTION_MAIN_INFO.description[0]}</p>
                             <p>{COLLECTION_MAIN_INFO.description[1]}</p>
 
                         </div>
 
-                        <button className='flex items-center gap-4 lg:gap6 w-full lg:w-auto text-black text-lg paragraph-font border border-black bg-amber-400 py-2 px-8 transition-all duration-300 hover:text-amber-500 hover:bg-amber-100 hover:border-amber-500'>
+                        <button 
+                        
+                        className='flex items-center justify-center gap-4 lg:gap6 w-full lg:w-auto sm:text-center text-black text-lg paragraph-font border border-black bg-amber-400 py-2 px-8 transition-all duration-300 hover:text-amber-500 hover:bg-amber-100 hover:border-amber-500'>
                             Explore Collection <ArrowBigDown className='w-8 h-8 animate-bounce fill-black' />
                         </button>
 

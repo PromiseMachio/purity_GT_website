@@ -30,7 +30,7 @@ const Navbar = () => {
   })
   return (
     <nav className={`fixed top-0 right-0 left-0 z-100 py-1 bg-none border-b border-transparent transition-all duration-200 ${isScroll
-      ? 'bg-black border-b-white '
+      ? 'bg-amber-600 border-b-white '
       :  `bg-black`
       }`}>
       <div className='max-w-330 mx-auto px-5'>
@@ -38,7 +38,7 @@ const Navbar = () => {
           {/* logo  */}
           <div className='flex items-center gap-1'>
             <span className='uppercase text-4xl text-white font-extrabold mask-b-from-neutral-800'>purity</span>
-            <img src={MAIN_INFO.logo} alt="logo_image" className={`w-15 h-15 rounded-2xl ${isScroll
+            <img src={isScroll?MAIN_INFO.logo2:MAIN_INFO.logo} alt="logo_image" className={`w-15 h-15 rounded-2xl ${isScroll
               ?`src={MAIN_INFO.logo2} w-15 h-15 `
               : ''}` }/>
             {/* <RoseIcon className='w-12 h-12 bg-linear-to-r from-blue-500 to-purple-600 bg-clip-text ' /> */}
@@ -49,7 +49,10 @@ const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => navigate(link.id)}
-                className={`text-base uppercase font-thin border-b border-transparent text-white/65 transition-all duration-300 hover:text-white/80 hover:border-white/80 `}
+                className={`paragraph-font text-base uppercase font-medium border-b border-transparent tracking-normal text-white/65 transition-all duration-300 hover:text-white/80 hover:border-white/80 ${isScroll
+                  ? 'text-black '
+                  :'text-black'
+                } `}
               >
                 {link.label}
               </button>
