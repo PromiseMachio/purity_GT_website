@@ -16,7 +16,7 @@ const Craft = () => {
                             <p>{CRAFTING_CONTENT.name[2]}</p>
                         </div>
 
-                        <div className='sm:text-lg text-2xl paragraph-font sm:text-gray-800 text-gray-800  font-normal leading-relaxed tracking-normal'>
+                        <div className='sm:text-lg text-2xl paragraph-font sm:text-gray-950 text-gray-950  font-normal leading-relaxed tracking-normal'>
                             <p >{CRAFTING_CONTENT.paragraph[0]}</p>
                             <p >{CRAFTING_CONTENT.paragraph[1]}</p>
                             <p >{CRAFTING_CONTENT.paragraph[2]}</p>
