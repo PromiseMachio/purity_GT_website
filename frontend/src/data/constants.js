@@ -90,35 +90,7 @@ export const ABOUT={
 export const PROCESS={
     intro:'Our approach',
     name:'FROM IDEA TO GARMENT',
-    process:[
-        {
-            id:'01',
-            heading:'Consultation',
-            text:'Tell us what you have in mind.'
-
-        },
-        {
-            id:'02',
-            heading:'Measurements',
-            text:'Accurate measurements for a beautiful fit.'
-        },
-        {
-            id:'03',
-            heading:'Design & Fabric',
-            text:'Refine the design and select the perfect fabric.'
-        },
-        {
-            id:'04',
-            heading:'Tailoring',
-            text:'Your garment is carefully cut and stitched.'
-        },
-        {
-            id:'05',
-            heading:'Final Fitting',
-            text:'Final adjustments for the perfect finish.',
-            
-        }
-    ]
+   
 }
 
 export const LOOKBOOK_CONTENT=[
