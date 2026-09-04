@@ -79,8 +79,7 @@ const Processcard = ({ process }) => {
 
                 </div>
             </div>
-
-
+            {/* middle  */}
             {/* RIGHT - IMAGE */}
             <div className="min-h-[450px] lg:min-h-full overflow-hidden rounded-3xl">
 

@@ -18,7 +18,6 @@ const Home = () => {
         <About />
         <Aboutme />
         <Lookbook />
-        
       </main>
       <Craft />
       <Footer />

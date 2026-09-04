@@ -3,6 +3,11 @@ import Colhero from '../contents/collection/Colhero'
 import Colnavbar from '../contents/collection/Colnavbar'
 import Colgallery from '../contents/collection/Colgallery'
 import Footer from '../layout/Footer'
+import { Route, Routes } from 'react-router-dom'
+import Process from '../pages/Process'
+import Services from '../pages/Services'
+import Home from '../pages/Home'
+import Booking from '../pages/Booking'
 
 const Collection = () => {
   return (
@@ -13,6 +18,7 @@ const Collection = () => {
         <Colgallery />
       </main>
       <Footer />
+
     </div>
   )
 }
