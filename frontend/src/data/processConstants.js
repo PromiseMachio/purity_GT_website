@@ -1,9 +1,9 @@
 // Images import
-import img1 from '../assets/processImages/processImage1.png'
-import img2 from '../assets/processImages/processImage2.png'
-import img3 from '../assets/processImages/processImage3.png'
-import img4 from '../assets/processImages/processImage4.png'
-import img5 from '../assets/processImages/processImage5.png'
+import consoltationImage from '../assets/cardImages/consultationImage.jpg'
+import measurementImage from '../assets/cardImages/measumentPic1.jpg'
+import designPic from '../assets/cardImages/d&fPic2.jpg'
+import tailoringPic from '../assets/cardImages/tailoringPic1.jpg'
+import finishingImage from '../assets/cardImages/finalFittingImg1.jpg'
 import { MessageCircle,Palette,Ruler, Scissors, CheckCircle  } from 'lucide-react'
 
 
@@ -12,11 +12,36 @@ export const PROCESS_MAIN_INFO = {
     name: ['FROM IDEA',
         'TO GARMENT'],
     intro: 'Our approach',
-    tagline:'From inspiration to creation, every detail matters.'
+    tagline:'From inspiration to creation, every detail matters.',
+    pro_sess:[
+        {id:'01',
+         name:'Consultation',
+         text:'Tell us what you have in mind.'
+        },
+        {id:'02',
+         name:'Measurements',
+         text:'Accurate measurements for a beautiful fit.'
+        },
+        {id:'03',
+         name:'Design & Fabric',
+         text:'Refine the design and select the perfect fabric.'
+        },
+        {id:'04',
+         name:'Tailoring',
+         text:'Your garment is carefully cut and stitched.'
+        },
+        {id:'05',
+         name:'Final Fitting',
+         text:'Final adjustments for the perfect finish.'
+        },
+
+    ]
 }
 export const process = [
     {
-        id: '01',
+        id: 1,
+        idText:'01',
+        category: 'consultation',
         heading: 'Consultation',
         subheading: 'Let’s bring your vision to life.',
         text: 'Tell us what you have in mind.',
@@ -31,11 +56,13 @@ export const process = [
         ],
         duration: '30–60 minutes',
         icon: MessageCircle,
-        image:img1
+        image:consoltationImage
     },
 
     {
-        id: '02',
+        id: 2,
+        idText:'02',
+        category: 'measurement',
         heading: 'Measurements',
         subheading: 'Precision for the perfect fit.',
         text: 'Accurate measurements for a beautiful fit.',
@@ -50,11 +77,13 @@ export const process = [
         ],
         duration: '20–40 minutes',
         icon: Ruler,
-        image: img2
+        image: measurementImage
     },
 
     {
-        id: '03',
+        id: 3,
+        idText:'03',
+        category: 'D&F',
         heading: 'Design & Fabric',
         subheading: 'Where creativity meets craftsmanship.',
         text: 'Refine the design and select the perfect fabric.',
@@ -70,11 +99,13 @@ export const process = [
         ],
         duration: '30–90 minutes',
         icon: Palette,
-        image: img3
+        image: designPic
     },
 
     {
-        id: '04',
+        id: 4,
+        idText:'04',
+        category: 'tailoring',
         heading: 'Tailoring',
         subheading: 'Crafted carefully, stitch by stitch.',
         text: 'Your garment is carefully cut and stitched.',
@@ -91,11 +122,13 @@ export const process = [
         ],
         duration: '3–14 days',
         icon: Scissors,
-        image:img4
+        image:tailoringPic
     },
 
     {
-        id: '05',
+        id: 5,
+        idText:'05',
+        category: 'Final Fitting',
         heading: 'Final Fitting',
         subheading: 'The finishing touch.',
         text: 'Final adjustments for the perfect finish.',
@@ -112,6 +145,6 @@ export const process = [
         ],
         duration: '30–60 minutes',
         icon: CheckCircle,
-        image:img5
+        image:finishingImage
     }
 ];

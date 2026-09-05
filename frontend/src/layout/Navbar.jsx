@@ -59,7 +59,7 @@ const Navbar = () => {
             ))}
           </nav>
 
-          <div>
+          <div className={`backdrop-blur-3xl shadow-2xl `}>
             <button
               onClick={() => navigate('/booking')}
               className='hidden md:flex bg-amber-900 py-2 px-5 transition-all duration-300 hover:bg-amber-600 '>

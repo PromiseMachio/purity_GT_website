@@ -43,7 +43,7 @@ const Footer = () => {
                                 <button
                                     key={link.id}
                                     onClick={() => navigate(link.id)}
-                                    className='text-left border-b border-transparent text-sm transition-all duration-300 hover:text-white hover:border-white w-fit'
+                                    className={`text-left border-b border-transparent text-sm transition-all duration-300 hover:text-white hover:border-white w-fit `}
                                 >
                                     {link.label}
                                 </button>

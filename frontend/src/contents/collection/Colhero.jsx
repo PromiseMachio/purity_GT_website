@@ -8,10 +8,10 @@ const Colhero = () => {
     return (
         <section className='relative min-h-[90vh] overflow-hidden z-10 bg-white flex gap-12 items-center justify-center pt-20'>
             <div className='relative max-w-7xl w-full items-center sm:px-6 lg:py-10'>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-15 items-center mb-20 '>
+                <div className='flex flex-col lg:flex-row items-center justify-center '>
                     {/* left side  */}
-                    <div className='text-left space-y-4 mx-2'>
-                        <div className='border border-amber-500 w-25 ' />
+                    <div className='text-center space-y-2 items-center justify-center mx-2'>
+                        {/* <div className='border border-amber-500 w-25 ' /> */}
                         <p className='uppercase text-amber-300 text-sm font-normal paragraph-font' >{COLLECTION_MAIN_INFO.into}</p>
                         <div className='text-5xl lg:text-7xl text-gray-900 font-extrabold tracking-wide leading-relaxed mb-6'>
                             <p>{COLLECTION_MAIN_INFO.name[0]}</p>
@@ -26,19 +26,15 @@ const Colhero = () => {
 
                         </div>
 
-                        <button 
+                        {/* <button 
                         
                         className='flex items-center justify-center gap-4 lg:gap6 w-full lg:w-auto sm:text-center text-black text-lg paragraph-font border border-black bg-amber-400 py-2 px-8 transition-all duration-300 hover:text-amber-500 hover:bg-amber-100 hover:border-amber-500'>
                             Explore Collection <ArrowBigDown className='w-8 h-8' />
-                        </button>
+                        </button> */}
 
                     </div>
                     {/* right side  */}
-                    <div className='relative w-full h-full items-center object-cover   '>
-                        <img className='w-[350px] h-[550px] lg:w-[500px] lg:h-[750px] transition-transform duration-300 hover:scale-105' src={COLLECTION_MAIN_INFO.img1} alt="" />
-                        <img className='absolute bottom-5 left-5 w-[200px] h-[250px]  lg:w-[300px] lg:h-[350px] border-5 border-amber-50 transition-transform duration-300 hover:scale-105' src={COLLECTION_MAIN_INFO.img2} alt="" />
-
-                    </div>
+                  
                 </div>
                 
 

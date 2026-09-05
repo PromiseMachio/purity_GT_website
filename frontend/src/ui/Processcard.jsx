@@ -2,7 +2,7 @@ import React from 'react'
 
 const Processcard = ({ process }) => {
     const {
-        id,
+        idText,
         heading,
         subheading,
         text,
@@ -19,11 +19,14 @@ const Processcard = ({ process }) => {
 
             {/* LEFT - CONTENT */}
             <div className="border border-amber-600/30 rounded-3xl p-8 lg:p-10 bg-white">
+                <div className='w-full h-100 object-cover'>
+                    <img className='w-full h-100 object-cover grayscale' src={image} alt={heading} />
+                </div>
 
                 {/* Number + decorative line */}
                 <div className="flex items-center gap-4 mb-8">
                     <span className="text-4xl fashion-font text-amber-600">
-                        {id}
+                        {idText}
                     </span>
 
                     <div className="w-20 border-t border-amber-600" />
@@ -79,17 +82,7 @@ const Processcard = ({ process }) => {
 
                 </div>
             </div>
-            {/* middle  */}
-            {/* RIGHT - IMAGE */}
-            <div className="min-h-[450px] lg:min-h-full overflow-hidden rounded-3xl">
-
-                <img
-                    className="w-full h-full object-cover"
-                    src={image}
-                    alt={heading}
-                />
-
-            </div>
+            
 
         </div>
     )

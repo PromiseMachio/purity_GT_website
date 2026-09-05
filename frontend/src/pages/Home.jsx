@@ -10,6 +10,7 @@ import Craft from '../contents/home/Craft'
 
 
 const Home = () => {
+  
   return (
     <div >
       <Navbar />
