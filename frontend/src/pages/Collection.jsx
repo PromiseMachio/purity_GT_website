@@ -8,6 +8,7 @@ import Process from '../pages/Process'
 import Services from '../pages/Services'
 import Home from '../pages/Home'
 import Booking from '../pages/Booking'
+import Footer_collection from '../layout/Footer_collection'
 
 const Collection = () => {
   return (
@@ -17,7 +18,7 @@ const Collection = () => {
         <Colhero />
         <Colgallery />
       </main>
-      <Footer />
+      <Footer_collection />
 
     </div>
   )

@@ -20,7 +20,7 @@ const Processcard = ({ process }) => {
             {/* LEFT - CONTENT */}
             <div className="border border-amber-600/30 rounded-3xl p-8 lg:p-10 bg-white">
                 <div className='w-full h-100 object-cover'>
-                    <img className='w-full h-100 object-cover grayscale' src={image} alt={heading} />
+                    <img className='w-full h-100 object-cover grayscale transition-all duration-300 hover:scale-110 hover:grayscale-0' src={image} alt={heading} />
                 </div>
 
                 {/* Number + decorative line */}

@@ -2,6 +2,7 @@ import React from 'react'
 import Colnavbar from '../contents/collection/Colnavbar'
 import Processcontent from '../contents/process/Processcontent'
 import Footer from '../layout/Footer'
+import Footer_process from '../layout/Footer_process'
 
 const Process = () => {
   return (
@@ -11,7 +12,7 @@ const Process = () => {
       <main>
       <Processcontent />
       </main>
-      <Footer />
+      <Footer_process />
     </div>
   )
 }

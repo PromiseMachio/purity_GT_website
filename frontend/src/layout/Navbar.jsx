@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { NAV_LINKS, MAIN_INFO } from '../data/constants';
 import { useNavigate } from 'react-router-dom';
 import { X, MenuIcon, RoseIcon } from 'lucide-react';
+import {scrollToSection} from '../hooks/scrollSpy.js'
 
 const Navbar = () => {
   // Javascript code
@@ -28,6 +29,15 @@ const Navbar = () => {
      * For instance we scroll downwords we can change the color of the navbar from lets say transparent to a more colored background using the ternary condition
      */
   })
+  const handleNavClick = (sectionId) => {
+    scrollToSection(sectionId); // Enables the scrolling to a selected section depending to the nav-link ID
+    setIsMenuOpen(false)// In mobile we dont expect this to remain open after selecting a nav option  
+    if (sectionId.startsWith('#') || sectionId.includes('/')) {
+      scrollToSection(sectionId.replace('#', ''));
+    } else {
+      navigate(sectionId);
+    }
+  }
   return (
     <nav className={`fixed top-0 right-0 left-0 z-100 py-1 bg-none border-b border-transparent transition-all duration-200 ${isScroll
       ? 'bg-amber-600 border-b-white '
@@ -48,7 +58,7 @@ const Navbar = () => {
             {NAV_LINKS.map((link) => (
               <button
                 key={link.id}
-                onClick={() => navigate(link.id)}
+                onClick={() => handleNavClick(link.id) }
                 className={`paragraph-font text-base uppercase font-medium border-b border-transparent tracking-normal text-white/65 transition-all duration-300 hover:text-white/80 hover:border-white/80 ${isScroll
                   ? 'text-black '
                   :'text-black'

@@ -3,6 +3,7 @@ import Servhero from '../contents/services/Servhero'
 import Colnavbar from '../contents/collection/Colnavbar'
 import Servcontent from '../contents/services/Servcontent'
 import Footer from '../layout/Footer'
+import Footer_services from '../layout/Footer_services'
 const Services = () => {
   return (
     <div>
@@ -11,7 +12,7 @@ const Services = () => {
         <Servhero />
         <Servcontent />
       </main>
-      <Footer />
+      <Footer_services />
     </div>
   )
 }
