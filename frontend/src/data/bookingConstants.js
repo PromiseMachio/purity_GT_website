@@ -49,285 +49,301 @@ export const HERO_BOOKING = {
         },
     ],
 
-    bottomText: 'YOUR VISION. OUR CRAFT. SOMETHING BEAUTIFUL.',
+    bottomText: ['YOUR VISION', 'OUR CRAFT', 'SOMETHING BEAUTIFUL'],
 
     scrollText: 'CHOOSE AN EXPERIENCE',
 }
 
 export const FITTING = {
     id: '01',
-
     name: 'BOOK A FITTING',
-
     tagline: 'Made for you. Measured with intention.',
 
     intro:
         'Tell us a little about yourself, the garment you have in mind, and your measurements. We will use these details to understand your vision and prepare for your fitting.',
 
-    steps: [
-        {
-            id: '01',
-            name: 'ABOUT YOU',
-            title: 'Tell Us About You',
-            description:
-                'Start with a few personal details so we know how to get in touch and prepare for your fitting.',
+    aboutYou: {
+        id: '01',
+        name: 'ABOUT YOU',
+        title: 'Tell Us About You',
 
-            fields: [
-                {
-                    name: 'firstName',
-                    label: 'First Name',
-                    type: 'text',
-                    placeholder: 'Enter your first name',
-                    required: true,
-                },
-                {
-                    name: 'lastName',
-                    label: 'Last Name',
-                    type: 'text',
-                    placeholder: 'Enter your last name',
-                    required: true,
-                },
-                {
-                    name: 'email',
-                    label: 'Email Address',
-                    type: 'email',
-                    placeholder: 'you@example.com',
-                    required: false,
-                },
-                {
-                    name: 'phone',
-                    label: 'Phone Number',
-                    type: 'tel',
-                    placeholder: '+254 7XX XXX XXX',
-                    required: true,
-                },
-                {
-                    name: 'gender',
-                    label: 'Gender',
-                    type: 'select',
-                    placeholder: 'Select gender',
-                    options: ['Female', 'Male', 'Prefer not to say'],
-                    required: true,
-                },
-            ],
-        },
+        description:
+            'Start with a few personal details so we know how to get in touch and prepare for your fitting.',
 
-        {
-            id: '02',
-            name: 'YOUR GARMENT',
-            title: 'What Are We Creating?',
-            description:
-                'Tell us about the garment you would like to have made and the occasion you are preparing for.',
-
-            fields: [
-                {
-                    name: 'garmentType',
-                    label: 'Garment Type',
-                    type: 'select',
-                    placeholder: 'Choose a garment',
-                    options: [
-                        'Dress',
-                        'Evening Gown',
-                        'Ankara Wear',
-                        'Two-Piece Set',
-                        'Bespoke Wear',
-                        'Formal Wear',
-                        'Suit',
-                        'Other',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'occasion',
-                    label: 'Occasion',
-                    type: 'select',
-                    placeholder: 'What is it for?',
-                    options: [
-                        'Wedding',
-                        'Dinner',
-                        'Formal Event',
-                        'Party',
-                        'Casual',
-                        'Photoshoot',
-                        'Other',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'fabric',
-                    label: 'Preferred Fabric',
-                    type: 'text',
-                    placeholder: 'e.g. Ankara, satin, chiffon...',
-                    required: false,
-                },
-                {
-                    name: 'colour',
-                    label: 'Preferred Colour',
-                    type: 'text',
-                    placeholder: 'What colour are you envisioning?',
-                    required: false,
-                },
-                {
-                    name: 'description',
-                    label: 'Describe Your Vision',
-                    type: 'textarea',
-                    placeholder:
-                        'Tell us about the style, design, colour, fabric or anything else you have in mind...',
-                    required: true,
-                },
-            ],
-        },
-
-        {
-            id: '03',
-            name: 'MEASUREMENTS',
-            title: 'Your Measurements',
-            description:
-                'Accurate measurements help us create a garment that feels as good as it looks. Enter your measurements in centimetres.',
-
-            fields: [
-                {
-                    name: 'bust',
-                    label: 'Bust',
-                    type: 'number',
-                    placeholder: 'cm',
-                    required: true,
-                },
-                {
-                    name: 'waist',
-                    label: 'Waist',
-                    type: 'number',
-                    placeholder: 'cm',
-                    required: true,
-                },
-                {
-                    name: 'hips',
-                    label: 'Hips',
-                    type: 'number',
-                    placeholder: 'cm',
-                    required: true,
-                },
-                {
-                    name: 'shoulder',
-                    label: 'Shoulder',
-                    type: 'number',
-                    placeholder: 'cm',
-                    required: true,
-                },
-                {
-                    name: 'sleeveLength',
-                    label: 'Sleeve Length',
-                    type: 'number',
-                    placeholder: 'cm',
-                    required: false,
-                },
-                {
-                    name: 'armhole',
-                    label: 'Armhole',
-                    type: 'number',
-                    placeholder: 'cm',
-                    required: false,
-                },
-                {
-                    name: 'dressLength',
-                    label: 'Dress / Garment Length',
-                    type: 'number',
-                    placeholder: 'cm',
-                    required: false,
-                },
-                {
-                    name: 'trouserLength',
-                    label: 'Trouser Length',
-                    type: 'number',
-                    placeholder: 'cm',
-                    required: false,
-                },
-            ],
-
-            measurementHelp: {
-                title: 'Not Sure How To Measure?',
-                description:
-                    'No worries. Follow our measurement guide or let us take your measurements during your fitting appointment.',
-                buttonText: 'VIEW MEASUREMENT GUIDE',
+        fields: [
+            {
+                name: 'firstName',
+                label: 'First Name',
+                type: 'text',
+                placeholder: 'Enter your first name',
+                required: true,
             },
-        },
+            {
+                name: 'lastName',
+                label: 'Last Name',
+                type: 'text',
+                placeholder: 'Enter your last name',
+                required: true,
+            },
+            {
+                name: 'email',
+                label: 'Email Address',
+                type: 'email',
+                placeholder: 'you@example.com',
+                required: false,
+            },
+            {
+                name: 'phone',
+                label: 'Phone Number',
+                type: 'tel',
+                placeholder: '+254 7XX XXX XXX',
+                required: true,
+            },
+            {
+                name: 'gender',
+                label: 'Gender',
+                type: 'select',
+                placeholder: 'Select gender',
+                options: [
+                    'Female',
+                    'Male',
+                    'Prefer not to say',
+                ],
+                required: true,
+            },
+        ],
+    },
 
-        {
-            id: '04',
-            name: 'INSPIRATION',
-            title: 'Show Us Your Inspiration',
+    garment: {
+        id: '02',
+        name: 'YOUR GARMENT',
+        title: 'What Are We Creating?',
+
+        description:
+            'Tell us about the garment you would like to have made and the occasion you are preparing for.',
+
+        fields: [
+            {
+                name: 'garmentType',
+                label: 'Garment Type',
+                type: 'select',
+                placeholder: 'Choose a garment',
+                options: [
+                    'Dress',
+                    'Evening Gown',
+                    'Ankara Wear',
+                    'Two-Piece Set',
+                    'Bespoke Wear',
+                    'Formal Wear',
+                    'Suit',
+                    'Other',
+                ],
+                required: true,
+            },
+            {
+                name: 'occasion',
+                label: 'Occasion',
+                type: 'select',
+                placeholder: 'What is it for?',
+                options: [
+                    'Wedding',
+                    'Dinner',
+                    'Formal Event',
+                    'Party',
+                    'Casual',
+                    'Photoshoot',
+                    'Other',
+                ],
+                required: true,
+            },
+            {
+                name: 'fabric',
+                label: 'Preferred Fabric',
+                type: 'text',
+                placeholder: 'e.g. Ankara, satin, chiffon...',
+                required: false,
+            },
+            {
+                name: 'colour',
+                label: 'Preferred Colour',
+                type: 'text',
+                placeholder: 'What colour are you envisioning?',
+                required: false,
+            },
+            {
+                name: 'description',
+                label: 'Describe Your Vision',
+                type: 'textarea',
+                placeholder:
+                    'Tell us about the style, design, colour, fabric or anything else you have in mind...',
+                required: true,
+            },
+        ],
+    },
+
+    measurements: {
+        id: '03',
+        name: 'MEASUREMENTS',
+        title: 'Your Measurements',
+
+        description:
+            'Accurate measurements help us create a garment that feels as good as it looks. Enter your measurements in centimetres.',
+
+        fields: [
+            {
+                name: 'bust',
+                label: 'Bust',
+                type: 'number',
+                placeholder: 'cm',
+                required: true,
+            },
+            {
+                name: 'waist',
+                label: 'Waist',
+                type: 'number',
+                placeholder: 'cm',
+                required: true,
+            },
+            {
+                name: 'hips',
+                label: 'Hips',
+                type: 'number',
+                placeholder: 'cm',
+                required: true,
+            },
+            {
+                name: 'shoulder',
+                label: 'Shoulder',
+                type: 'number',
+                placeholder: 'cm',
+                required: true,
+            },
+            {
+                name: 'sleeveLength',
+                label: 'Sleeve Length',
+                type: 'number',
+                placeholder: 'cm',
+                required: false,
+            },
+            {
+                name: 'armhole',
+                label: 'Armhole',
+                type: 'number',
+                placeholder: 'cm',
+                required: false,
+            },
+            {
+                name: 'dressLength',
+                label: 'Dress / Garment Length',
+                type: 'number',
+                placeholder: 'cm',
+                required: false,
+            },
+            {
+                name: 'trouserLength',
+                label: 'Trouser Length',
+                type: 'number',
+                placeholder: 'cm',
+                required: false,
+            },
+        ],
+
+        measurementHelp: {
+            title: 'Not Sure How To Measure?',
+
             description:
-                'Have a reference image, sketch or moodboard? Share it with us so we can better understand your vision.',
+                'No worries. Follow our measurement guide or let us take your measurements during your fitting appointment.',
 
-            fields: [
-                {
-                    name: 'referenceImage',
-                    label: 'Upload Inspiration',
-                    type: 'file',
-                    accept: 'image/*',
-                    required: false,
-                },
-                {
-                    name: 'additionalNotes',
-                    label: 'Additional Notes',
-                    type: 'textarea',
-                    placeholder:
-                        'Anything else you would like us to know about your garment?',
-                    required: false,
-                },
-            ],
+            buttonText: 'VIEW MEASUREMENT GUIDE',
         },
+    },
 
-        {
-            id: '05',
-            name: 'APPOINTMENT',
-            title: 'Choose Your Preferred Appointment',
-            description:
-                'Let us know when you would prefer to have your fitting or consultation.',
+    inspiration: {
+        id: '04',
+        name: 'INSPIRATION',
+        title: 'Show Us Your Inspiration',
 
-            fields: [
-                {
-                    name: 'preferredDate',
-                    label: 'Preferred Date',
-                    type: 'date',
-                    required: true,
-                },
-                {
-                    name: 'preferredTime',
-                    label: 'Preferred Time',
-                    type: 'select',
-                    placeholder: 'Select a time',
-                    options: [
-                        'Morning',
-                        'Afternoon',
-                        'Evening',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'contactMethod',
-                    label: 'Preferred Contact Method',
-                    type: 'select',
-                    placeholder: 'How should we contact you?',
-                    options: ['WhatsApp', 'Phone Call', 'Email'],
-                    required: true,
-                },
-            ],
-        },
-    ],
+        description:
+            'Have a reference image, sketch or moodboard? Share it with us so we can better understand your vision.',
+
+        fields: [
+            {
+                name: 'referenceImage',
+                label: 'Upload Inspiration',
+                type: 'file',
+                accept: 'image/*',
+                required: false,
+            },
+            {
+                name: 'additionalNotes',
+                label: 'Additional Notes',
+                type: 'textarea',
+                placeholder:
+                    'Anything else you would like us to know about your garment?',
+                required: false,
+            },
+        ],
+    },
+
+    appointment: {
+        id: '05',
+        name: 'APPOINTMENT',
+        title: 'Choose Your Preferred Appointment',
+
+        description:
+            'Let us know when you would prefer to have your fitting or consultation.',
+
+        fields: [
+            {
+                name: 'preferredDate',
+                label: 'Preferred Date',
+                type: 'date',
+                required: true,
+            },
+            {
+                name: 'preferredTime',
+                label: 'Preferred Time',
+                type: 'select',
+                placeholder: 'Select a time',
+                options: [
+                    'Morning',
+                    'Afternoon',
+                    'Evening',
+                ],
+                required: true,
+            },
+            {
+                name: 'contactMethod',
+                label: 'Preferred Contact Method',
+                type: 'select',
+                placeholder: 'How should we contact you?',
+                options: [
+                    'WhatsApp',
+                    'Phone Call',
+                    'Email',
+                ],
+                required: true,
+            },
+        ],
+    },
 
     review: {
         title: 'REVIEW YOUR REQUEST',
+
         description:
             'Take a moment to review your details before sending your fitting request. Our team will get in touch to confirm your appointment and discuss the next steps.',
+
         buttonText: 'SUBMIT FITTING REQUEST',
+
         editText: 'EDIT DETAILS',
     },
 
     success: {
         title: 'YOUR JOURNEY BEGINS HERE.',
+
         message:
             'Thank you for choosing Purity. We have received your fitting request and will be in touch shortly to confirm the details.',
+
         buttonText: 'BACK TO BOOKING',
     },
 }
