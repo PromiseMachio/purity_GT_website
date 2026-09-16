@@ -5,6 +5,7 @@ import Booking_course from '../contents/booking/Booking_course'
 import Booking_collaboration from '../contents/booking/Booking_collaboration'
 import Navbar_booking from '../contents/booking/Navbar_booking'
 import About_fitting from '../contents/booking/About_fitting'
+import About_course from '../contents/booking/About_course'
 
 const Booking = () => {
   return (
@@ -14,6 +15,7 @@ const Booking = () => {
         <Booking_hero />
         <About_fitting />
         <Booking_fitting />
+        <About_course />
         <Booking_course />
         <Booking_collaboration />
       </main>

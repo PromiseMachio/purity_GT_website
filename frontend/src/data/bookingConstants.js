@@ -2,6 +2,7 @@ import womanImage from '../assets/bookings/bookingImage3.png'
 import manImge1 from '../assets/bookings/bookingImage1.png'
 import studentImage from '../assets/bookings/studentImage1.png'
 import collaboImage from '../assets/bookings/collaboratorsImage1.png'
+import courseQuoteImg from '../assets/sectionBackgroundImg2.png'
 export const HERO_BOOKING = {
     name: 'BEGIN YOUR JOURNEY',
 
@@ -14,6 +15,7 @@ export const HERO_BOOKING = {
     image2: womanImage,
     image3: studentImage,
     image4: collaboImage,
+    image5: courseQuoteImg,
 
     imageAlt: 'Purity fashion design and tailoring',
 
@@ -350,254 +352,257 @@ export const FITTING = {
 
 export const COURSE = {
     id: '02',
-
     name: 'FASHION & TAILORING COURSE',
-
     tagline: 'Learn the craft. Build your confidence.',
 
     intro:
         'A practical introduction to fashion design and tailoring for beginners, aspiring designers and anyone ready to turn their creativity into beautifully crafted garments.',
 
-    steps: [
-        {
-            id: '01',
-            name: 'ABOUT YOU',
-            title: 'Tell Us About You',
-            description:
-                'Start by telling us a little about yourself so we can understand your interests and learning goals.',
+    aboutYou: {
+        id: '01',
+        name: 'ABOUT YOU',
+        title: 'Tell Us About You',
 
-            fields: [
-                {
-                    name: 'firstName',
-                    label: 'First Name',
-                    type: 'text',
-                    placeholder: 'Enter your first name',
-                    required: true,
-                },
-                {
-                    name: 'lastName',
-                    label: 'Last Name',
-                    type: 'text',
-                    placeholder: 'Enter your last name',
-                    required: true,
-                },
-                {
-                    name: 'email',
-                    label: 'Email Address',
-                    type: 'email',
-                    placeholder: 'you@example.com',
-                    required: true,
-                },
-                {
-                    name: 'phone',
-                    label: 'Phone Number',
-                    type: 'tel',
-                    placeholder: '+254 7XX XXX XXX',
-                    required: true,
-                },
-                {
-                    name: 'ageGroup',
-                    label: 'Age Group',
-                    type: 'select',
-                    placeholder: 'Select your age group',
-                    options: [
-                        'Under 18',
-                        '18 – 24',
-                        '25 – 34',
-                        '35 – 44',
-                        '45+',
-                    ],
-                    required: true,
-                },
-            ],
-        },
+        description:
+            'Start by telling us a little about yourself so we can understand your interests and learning goals.',
 
-        {
-            id: '02',
-            name: 'YOUR INTEREST',
-            title: 'What Would You Like To Learn?',
-            description:
-                'Choose the areas of fashion and tailoring that interest you most. You can select more than one.',
+        fields: [
+            {
+                name: 'firstName',
+                label: 'First Name',
+                type: 'text',
+                placeholder: 'Enter your first name',
+                required: true,
+            },
+            {
+                name: 'lastName',
+                label: 'Last Name',
+                type: 'text',
+                placeholder: 'Enter your last name',
+                required: true,
+            },
+            {
+                name: 'email',
+                label: 'Email Address',
+                type: 'email',
+                placeholder: 'you@example.com',
+                required: true,
+            },
+            {
+                name: 'phone',
+                label: 'Phone Number',
+                type: 'tel',
+                placeholder: '+254 7XX XXX XXX',
+                required: true,
+            },
+            {
+                name: 'ageGroup',
+                label: 'Age Group',
+                type: 'select',
+                placeholder: 'Select your age group',
+                options: [
+                    'Under 18',
+                    '18 – 24',
+                    '25 – 34',
+                    '35 – 44',
+                    '45+',
+                ],
+                required: true,
+            },
+        ],
+    },
 
-            fields: [
-                {
-                    name: 'interests',
-                    label: 'Areas of Interest',
-                    type: 'multiselect',
-                    options: [
-                        'Fashion Design',
-                        'Sewing',
-                        'Pattern Making',
-                        'Garment Construction',
-                        'Measurements & Fitting',
-                        'Fabric Selection',
-                        'Garment Finishing',
-                        'Basic Alterations',
-                        'Ankara Design',
-                        'Bespoke Tailoring',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'courseLevel',
-                    label: 'Your Current Level',
-                    type: 'select',
-                    placeholder: 'Select your experience',
-                    options: [
-                        'Complete Beginner',
-                        'Beginner',
-                        'Some Experience',
-                        'Intermediate',
-                        'Advanced',
-                    ],
-                    required: true,
-                },
-            ],
-        },
+    interests: {
+        id: '02',
+        name: 'YOUR INTEREST',
+        title: 'What Would You Like To Learn?',
 
-        {
-            id: '03',
-            name: 'YOUR EXPERIENCE',
-            title: 'Tell Us About Your Experience',
-            description:
-                'There is no right or wrong answer. This simply helps us understand where you are starting from.',
+        description:
+            'Choose the areas of fashion and tailoring that interest you most. You can select more than one.',
 
-            fields: [
-                {
-                    name: 'sewingMachine',
-                    label: 'Have You Used a Sewing Machine Before?',
-                    type: 'radio',
-                    options: [
-                        'Yes',
-                        'No',
-                        'A little',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'fashionExperience',
-                    label: 'Have You Studied Fashion or Tailoring Before?',
-                    type: 'radio',
-                    options: [
-                        'Yes',
-                        'No',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'experienceDescription',
-                    label: 'Tell Us About Your Experience',
-                    type: 'textarea',
-                    placeholder:
-                        'Tell us about anything you have created, learned or worked on before...',
-                    required: false,
-                },
-            ],
-        },
+        fields: [
+            {
+                name: 'interests',
+                label: 'Areas of Interest',
+                type: 'multiselect',
+                options: [
+                    'Fashion Design',
+                    'Sewing',
+                    'Pattern Making',
+                    'Garment Construction',
+                    'Measurements & Fitting',
+                    'Fabric Selection',
+                    'Garment Finishing',
+                    'Basic Alterations',
+                    'Ankara Design',
+                    'Bespoke Tailoring',
+                ],
+                required: true,
+            },
+            {
+                name: 'courseLevel',
+                label: 'Your Current Level',
+                type: 'select',
+                placeholder: 'Select your experience',
+                options: [
+                    'Complete Beginner',
+                    'Beginner',
+                    'Some Experience',
+                    'Intermediate',
+                    'Advanced',
+                ],
+                required: true,
+            },
+        ],
+    },
 
-        {
-            id: '04',
-            name: 'YOUR GOALS',
-            title: 'What Do You Hope To Achieve?',
-            description:
-                'Understanding your goals helps us create a learning experience that feels relevant to you.',
+    experience: {
+        id: '03',
+        name: 'YOUR EXPERIENCE',
+        title: 'Tell Us About Your Experience',
 
-            fields: [
-                {
-                    name: 'learningGoal',
-                    label: 'What Is Your Main Goal?',
-                    type: 'select',
-                    placeholder: 'Choose your main goal',
-                    options: [
-                        'Learn Fashion as a Hobby',
-                        'Learn to Make My Own Clothes',
-                        'Start a Fashion Business',
-                        'Become a Fashion Designer',
-                        'Improve My Existing Skills',
-                        'Learn Professional Tailoring',
-                        'Other',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'futureGoal',
-                    label: 'Where Do You See This Taking You?',
-                    type: 'textarea',
-                    placeholder:
-                        'Tell us what you would like to be able to create or achieve after the course...',
-                    required: false,
-                },
-            ],
-        },
+        description:
+            'There is no right or wrong answer. This simply helps us understand where you are starting from.',
 
-        {
-            id: '05',
-            name: 'COURSE PREFERENCES',
-            title: 'How Would You Like To Learn?',
-            description:
-                'Tell us about your preferred learning format and schedule.',
+        fields: [
+            {
+                name: 'sewingMachine',
+                label: 'Have You Used a Sewing Machine Before?',
+                type: 'radio',
+                options: [
+                    'Yes',
+                    'No',
+                    'A little',
+                ],
+                required: true,
+            },
+            {
+                name: 'fashionExperience',
+                label: 'Have You Studied Fashion or Tailoring Before?',
+                type: 'radio',
+                options: [
+                    'Yes',
+                    'No',
+                ],
+                required: true,
+            },
+            {
+                name: 'experienceDescription',
+                label: 'Tell Us About Your Experience',
+                type: 'textarea',
+                placeholder:
+                    'Tell us about anything you have created, learned or worked on before...',
+                required: false,
+            },
+        ],
+    },
 
-            fields: [
-                {
-                    name: 'learningFormat',
-                    label: 'Preferred Learning Format',
-                    type: 'radio',
-                    options: [
-                        'Physical',
-                        'Online',
-                        'Either',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'schedule',
-                    label: 'Preferred Schedule',
-                    type: 'radio',
-                    options: [
-                        'Weekdays',
-                        'Weekends',
-                        'Flexible',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'preferredTime',
-                    label: 'Preferred Time',
-                    type: 'select',
-                    placeholder: 'Select preferred time',
-                    options: [
-                        'Morning',
-                        'Afternoon',
-                        'Evening',
-                        'Flexible',
-                    ],
-                    required: true,
-                },
-            ],
-        },
+    goals: {
+        id: '04',
+        name: 'YOUR GOALS',
+        title: 'What Do You Hope To Achieve?',
 
-        {
-            id: '06',
-            name: 'ADDITIONAL INFORMATION',
-            title: 'Anything Else You Would Like Us To Know?',
-            description:
-                'Share anything that could help us understand your expectations or learning needs.',
+        description:
+            'Understanding your goals helps us create a learning experience that feels relevant to you.',
 
-            fields: [
-                {
-                    name: 'additionalNotes',
-                    label: 'Additional Notes',
-                    type: 'textarea',
-                    placeholder:
-                        'Tell us anything else about your interests, expectations or questions...',
-                    required: false,
-                },
-            ],
-        },
-    ],
+        fields: [
+            {
+                name: 'learningGoal',
+                label: 'What Is Your Main Goal?',
+                type: 'select',
+                placeholder: 'Choose your main goal',
+                options: [
+                    'Learn Fashion as a Hobby',
+                    'Learn to Make My Own Clothes',
+                    'Start a Fashion Business',
+                    'Become a Fashion Designer',
+                    'Improve My Existing Skills',
+                    'Learn Professional Tailoring',
+                    'Other',
+                ],
+                required: true,
+            },
+            {
+                name: 'futureGoal',
+                label: 'Where Do You See This Taking You?',
+                type: 'textarea',
+                placeholder:
+                    'Tell us what you would like to be able to create or achieve after the course...',
+                required: false,
+            },
+        ],
+    },
+
+    preferences: {
+        id: '05',
+        name: 'COURSE PREFERENCES',
+        title: 'How Would You Like To Learn?',
+
+        description:
+            'Tell us about your preferred learning format and schedule.',
+
+        fields: [
+            {
+                name: 'learningFormat',
+                label: 'Preferred Learning Format',
+                type: 'radio',
+                options: [
+                    'Physical',
+                    'Online',
+                    'Either',
+                ],
+                required: true,
+            },
+            {
+                name: 'schedule',
+                label: 'Preferred Schedule',
+                type: 'radio',
+                options: [
+                    'Weekdays',
+                    'Weekends',
+                    'Flexible',
+                ],
+                required: true,
+            },
+            {
+                name: 'preferredTime',
+                label: 'Preferred Time',
+                type: 'select',
+                placeholder: 'Select preferred time',
+                options: [
+                    'Morning',
+                    'Afternoon',
+                    'Evening',
+                    'Flexible',
+                ],
+                required: true,
+            },
+        ],
+    },
+
+    additionalInformation: {
+        id: '06',
+        name: 'ADDITIONAL INFORMATION',
+        title: 'Anything Else You Would Like Us To Know?',
+
+        description:
+            'Share anything that could help us understand your expectations or learning needs.',
+
+        fields: [
+            {
+                name: 'additionalNotes',
+                label: 'Additional Notes',
+                type: 'textarea',
+                placeholder:
+                    'Tell us anything else about your interests, expectations or questions...',
+                required: false,
+            },
+        ],
+    },
 
     review: {
         title: 'REVIEW YOUR ENQUIRY',
+
         description:
             'Take a moment to review your information before sending your course enquiry.',
 
