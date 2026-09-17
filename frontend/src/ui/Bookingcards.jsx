@@ -174,7 +174,7 @@ export const Aboutcard = ({ formData, handleChange }) => {
             </label>
           </div>
           <div>
-            <label htmlFor="age" className='block text-sm font-medium text-amber-500 paragraph-font mb-2' >Age *yrs
+            <label htmlFor="age" className='block text-sm font-medium text-amber-500 paragraph-font mb-2' >Age *yrs</label>
               <input
                 type="number"
                 id="age"
@@ -186,7 +186,7 @@ export const Aboutcard = ({ formData, handleChange }) => {
                 onChange={handleChange}
                 className="w-20 border rounded px-2 py-1 text-white"
               />
-            </label>
+            
           </div>
         </div>
 
