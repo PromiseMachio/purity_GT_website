@@ -146,7 +146,7 @@ export const Aboutcard = ({ formData, handleChange }) => {
           <span className='block text-sm font-medium text-amber-500 paragraph-font mb-2'>
             Gender
           </span>
-          <div className='flex items-center gap-6'>
+          <div>
             <label htmlFor="male" className='flex items-center gap-2 text-white cursor-pointer'>
               <input
                 type='radio'
