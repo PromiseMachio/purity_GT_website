@@ -106,7 +106,7 @@ const Navbar = () => {
             </button>
           ))}
           <button
-              onClick={() => handleNavClick('/booking')}
+              onClick={() => navigate('/booking')}
               className='w-full bg-amber-900 mt-1.5 py-2 px-5 transition-all duration-300 hover:bg-amber-600 '>
               <span className='text-black font-light transition-all duration-300 hover:text-white'>BOOK A FITTING</span>
             </button>
