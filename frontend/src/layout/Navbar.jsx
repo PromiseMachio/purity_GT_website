@@ -71,7 +71,7 @@ const Navbar = () => {
 
           <div className={`backdrop-blur-3xl shadow-2xl `}>
             <button
-              onClick={() => navigate('/booking')}
+              onClick={() => handleNavClick('/booking')}
               className='hidden md:flex bg-amber-900 py-2 px-5 transition-all duration-300 hover:bg-amber-600 '>
               <span className='text-black font-light transition-all duration-300 hover:text-white'>BOOK A FITTING</span>
             </button>
@@ -99,14 +99,14 @@ const Navbar = () => {
           {NAV_LINKS.map((link)=>(
             <button
             key={link.id}
-            onClick={()=>navigate(link.id)}
+            onClick={()=>handleNavClick(link.id)}
             className='block w-full border-b  border-gray-200 text-center text-amber-800 text-2xl font-light px-4 py-3   transition-all duration-300 hover:text-amber-950 hover:border-gray-600'
             >
               {link.label}
             </button>
           ))}
           <button
-              onClick={() => navigate('/booking')}
+              onClick={() => handleNavClick('/booking')}
               className='w-full bg-amber-900 mt-1.5 py-2 px-5 transition-all duration-300 hover:bg-amber-600 '>
               <span className='text-black font-light transition-all duration-300 hover:text-white'>BOOK A FITTING</span>
             </button>

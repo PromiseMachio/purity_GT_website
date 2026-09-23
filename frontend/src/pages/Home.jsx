@@ -12,7 +12,7 @@ import Craft from '../contents/home/Craft'
 const Home = () => {
   
   return (
-    <div >
+    <div id='home' >
       <Navbar />
       <main className='lg:pb-[1vh] pb-[205vh]' >
         <Hero />

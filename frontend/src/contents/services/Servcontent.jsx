@@ -1,8 +1,20 @@
 import React from 'react'
 import { Dot } from 'lucide-react'
 import { SERVICE_SECTION1, SERVICE_SECTION2, SERVICES } from '../../data/constants'
+import { scrollToSection } from '../../hooks/scrollSpy'
+import { useNavigate } from 'react-router-dom'
 
 const Servcontent = () => {
+    const navigate = useNavigate()
+
+      const handleClick = (sectionId) => {
+        // In mobile we dont expect this to remain open after selecting a nav option  
+        if (sectionId.startsWith('#') || sectionId.includes('/')) {
+          scrollToSection(sectionId.replace('#', ''));
+        } else {
+          navigate(sectionId);
+        }
+      }
     return (
         <section className='relative overflow-hidden bg-amber-50 min-h-[90vh]'>
             <div className='max-w-7xl w-full items-center'>
@@ -39,7 +51,7 @@ const Servcontent = () => {
                                 <p className="text-gray-700 tracking-normal text-sm leading-relaxed line-clamp-2 paragraph-font">
                                     {SERVICE_SECTION1.description}
                                 </p>
-                                 <button className='border border-black text-black py-2 px-8 transition-all duration-300 hover:text-amber-600 hover:border-amber-500 '>
+                                <button onClick={()=>navigate('/booking')} className='border border-black text-black py-2 px-8 transition-all duration-300 hover:text-amber-600 hover:border-amber-500 '>
                                     Enquire More
                                 </button>
                             </div>
@@ -63,7 +75,7 @@ const Servcontent = () => {
                                 <p className="text-gray-700 tracking-normal text-sm leading-relaxed line-clamp-2 paragraph-font">
                                     {SERVICE_SECTION2.description}
                                 </p>
-                                 <button className='border border-black text-white bg-amber-400 py-2 px-8 transition-all duration-300 hover:text-amber-600 hover:border-amber-500 hover:bg-transparent '>
+                                <button onClick={()=>navigate('/booking')} className='border border-black text-white bg-amber-400 py-2 px-8 transition-all duration-300 hover:text-amber-600 hover:border-amber-500 hover:bg-transparent '>
                                     Let us collabrate
                                 </button>
                             </div>

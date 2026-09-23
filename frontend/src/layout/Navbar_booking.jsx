@@ -19,10 +19,11 @@ const Navbar = () => {
     // Creating a function inside to hancdel scroll 
     const handleScroll = () => {
       setIsScroll(window.scrollY > 50)
+      
     }
     // Add an event listiner to the called function using DOM
     window.addEventListener('scroll', handleScroll) // The event listener calls the function which detects windows screen scrolled half vertically
-    return () => window.removeEventListener('scroll', handleScroll) // when the scroll is stopped the function is removed
+    return () => {window.removeEventListener('scroll', handleScroll),setIsMenuOpen(false)} // when the scroll is stopped the function is removed
 
     /**
      * The question is whre is the useEffect used probably in our code

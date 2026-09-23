@@ -23,7 +23,9 @@ export const HERO_BOOKING = {
 
     options: [
         {
-            id: '01',
+
+            id:'fitting',
+            ids: '01',
             name: 'FITTING',
             title: 'Create Your Perfect Fit',
             description:
@@ -33,7 +35,8 @@ export const HERO_BOOKING = {
         },
 
         {
-            id: '02',
+            id:'course',
+            ids: '02',
             name: 'COURSE',
             title: 'Learn The Craft',
             description:
@@ -43,7 +46,8 @@ export const HERO_BOOKING = {
         },
 
         {
-            id: '03',
+            id:'collaborations',
+            ids: '03',
             name: 'COLLABORATION',
             title: 'Create Together',
             description:

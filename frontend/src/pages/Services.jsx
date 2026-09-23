@@ -7,7 +7,7 @@ import Footer_services from '../layout/Footer_services'
 import Navbar_services from '../layout/Navbar_services'
 const Services = () => {
   return (
-    <div>
+    <div id='services'>
       <Navbar_services/>
       <main>
         <Servhero />

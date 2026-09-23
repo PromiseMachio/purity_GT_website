@@ -1,10 +1,15 @@
 import React from 'react'
 import { HERO_BOOKING } from '../../data/bookingConstants'
+import { scrollToSection } from '../../hooks/scrollSpy';
 
 const Booking_hero = () => {
+    const handleNavClick = (sectionId) => {
+        scrollToSection(sectionId); // Enables the scrolling to a selected section depending to the nav-link ID
+        // In mobile we dont expect this to remain open after selecting a nav option  
+    }
     return (
-        <section className='relative min-h-[90vh] w-full bg-cover bg-center bg-no-repeat flex items-center justify-center overflow-hidden bg-linear-to-tl from-gray-900 via-gray-700 to-gray-300' style={{ backgroundImage: `url(${HERO_BOOKING.image1})` }}>
-            <div className='relative max-w-7xl w-full items-center sm:px-6 lg:py-10'>
+        <section className='relative min-h-[90vh]  w-full bg-cover bg-center bg-no-repeat flex items-center justify-center overflow-hidden bg-linear-to-tl from-gray-900 via-gray-700 to-gray-300' style={{ backgroundImage: `url(${HERO_BOOKING.image1})` }}>
+            <div className='relative max-w-7xl w-full items-center sm:px-6 lg:py-10 mt-20'>
                 <div className='flex flex-col lg:flex-row items-center justify-center '>
                     <div className='text-center space-y-4 items-center justify-center mx-2'>
                         <div className='items-center justify-center'>
@@ -14,10 +19,10 @@ const Booking_hero = () => {
                         <div className='text-center tracking-normal'>
                             <p className='text-2xl lg:text-6xl tracking-normal uppercase text-cyan-600'>{HERO_BOOKING.name}</p>
                         </div>
-                        <div className='flex flex-col lg:flex-row items-stretch gap-6 lg:gap-8 max-w-7xl mx-auto p-4'>
+                        <div className='flex flex-col lg:flex-row items-stretch gap-3 lg:gap-8 max-w-7xl mx-auto p-2 lg:p-4'>
                             {HERO_BOOKING.options.map((link) => (
                                 <div
-                                    key={link.id}
+                                    key={link.ids}
                                     className='relative flex-1 group overflow-hidden rounded-2xl border border-white/10 bg-slate-950/40 p-6 lg:p-8 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)]'
                                 >
                                     {/* Ambient Neon Background Glow (Hidden by default, fades in on hover) */}
@@ -26,7 +31,7 @@ const Booking_hero = () => {
                                     {/* Header / ID Section */}
                                     <div className='flex items-center gap-3 mb-6'>
                                         <span className='fashion-font text-xl lg:text-3xl font-bold tracking-wider text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]'>
-                                            {link.id}
+                                            {link.ids}
                                         </span>
                                         <div className='h-[1px] bg-gradient-to-r from-cyan-500/50 to-transparent w-16' />
                                     </div>
@@ -51,7 +56,7 @@ const Booking_hero = () => {
                                         </p>
 
                                         {/* Electric Styled Button */}
-                                        <button className='relative overflow-hidden w-full lg:w-fit border border-cyan-500/40 text-cyan-400 px-5 py-2.5 bg-cyan-950/20 text-xs font-semibold tracking-widest uppercase rounded-lg transition-all duration-300 hover:bg-cyan-500 hover:text-black hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.4)] hover:scale-[1.02] active:scale-[0.98]'>
+                                        <button onClick={() => handleNavClick(link.id)} className='relative overflow-hidden w-full lg:w-fit border border-cyan-500/40 text-cyan-400 px-5 py-2.5 bg-cyan-950/20 text-xs font-semibold tracking-widest uppercase rounded-lg transition-all duration-300 hover:bg-cyan-500 hover:text-black hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.4)] hover:scale-[1.02] active:scale-[0.98]'>
                                             {link.buttonText}
                                         </button>
                                     </div>
