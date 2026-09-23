@@ -342,7 +342,7 @@ export const Measumentcard = ({ formData, handleChange }) => {
           </div>
 
         </div>
-        <p className='text-white/70 font-normal paragraph-font'>Not Sure How To Measure? <button className='border-b border-white text-amber-400 transition-all duration-300 hover:border-blue-400 hover:text-blue-500'>help</button></p>
+        <p className='text-white/70 font-normal paragraph-font'>Not Sure How To Measure? <button type='button' className='border-b border-white text-amber-400 transition-all duration-300 hover:border-blue-400 hover:text-blue-500'>help</button></p>
 
       </div>
     </div>

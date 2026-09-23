@@ -79,16 +79,14 @@ const Booking_fitting = () => {
             )
 
             setStatus({
+                type: '',
+                message: ''
+            })
+            setStatus({
                 type: "success",
                 message: `Thank you ${formData.names}. Your fitting request has been received.`
             })
 
-            setTimeout(() => {
-                setStatus({
-                    type: '',
-                    message: ''
-                })
-            }, 5000)
 
             console.log("FORM DATA:", formData)
 
@@ -195,7 +193,7 @@ const Booking_fitting = () => {
                 {/* NEXT / SUBMIT */}
                 {currentStep === cards.length - 1 ? (
 
-                    <button type='submit' disabled={status.type === 'success'} className={`px-8 py-3 bg-amber-500 text-black rounded-full font-medium hover:bg-amber-400 transition disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-amber-500`}>
+                    <button type='button' onClick={handleSubmit} disabled={status.type === 'success'} className={`px-8 py-3 bg-amber-500 text-black rounded-full font-medium hover:bg-amber-400 transition disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-amber-500`}>
                         {status.type === 'success' ? 'Request Sent ✓' : 'Submit Request →'}
                     </button>
 

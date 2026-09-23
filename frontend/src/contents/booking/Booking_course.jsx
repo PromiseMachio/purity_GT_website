@@ -3,17 +3,17 @@ import { About_youcourse, Intrest, Learning } from '../../ui/Coursecards'
 import { HERO_BOOKING } from '../../data/bookingConstants'
 import emailjs from '@emailjs/browser'
 
-const Booking_fitting = () => {
+const Booking_course = () => {
     // hooks and states 
     const [currentStep, setCurrentStep] = useState(0)
     const initialFormData = {
-        names: '',
-        email: '',
-        phone: '',
+        namess: '',
+        emaill: '',
+        phonee: '',
         ageGroup: '',
         genderr: '',
 
-        interests: '',
+        interests: [],
         courseLevel: '',
         sewingMachine: '',
         fashionExperience: '',
@@ -36,7 +36,7 @@ const Booking_fitting = () => {
     })
     // Handling change function
     const handleChange = (e) => {
-        const { name, value, type, checked, files } = e.target
+        const { name, value, type, checked } = e.target
 
         if (type === "checkbox" && name === "interests") {
             setFormData((prev) => {
@@ -67,7 +67,7 @@ const Booking_fitting = () => {
 
         setFormData((prev) => ({
             ...prev,
-            [name]: files ? files[0] : value,
+            [name]: value,
         }))
     }
     // Handling submit function 
@@ -75,16 +75,12 @@ const Booking_fitting = () => {
         e.preventDefault()
 
         if (
-            !formData.names ||
-            !formData.phone ||
+            !formData.namess ||
+            !formData.phonee ||
             !formData.ageGroup ||
             !formData.fashionExperience ||
-            !formData.courseLevel ||
-            !formData.sewingMachine ||
-            !formData.email ||
-            !formData.interests ||
-            !formData.learningFormat ||
-            !formData.learningGoal
+            !formData.sewingMachine
+
 
         ) {
             setStatus({
@@ -96,20 +92,24 @@ const Booking_fitting = () => {
         }
 
         try {
-
+            
             await emailjs.send(
                 "service_z5vsrro",
-                "template_7i6fzej",
+                "template_0a0htrf",
                 formData,
                 "SXJcxZeUL5TBtPUpg"
             )
+            setStatus({
+                type: '',
+                message: ''
+            })
 
-            setTimeout((
-                setStatus({
-                    type: "success",
-                    message: `Thank you ${formData.names}. Your fitting request has been received.`
-                })
-            ), 3000)
+
+            setStatus({
+                type: "success",
+                message: `Thank you ${formData.namess}. Your COURSE BOOKING request has been received.`
+            })
+
 
 
             console.log("FORM DATA:", formData)
@@ -118,12 +118,11 @@ const Booking_fitting = () => {
 
             console.error("EMAIL ERROR:", error)
 
-            setTimeout((
-                setStatus({
-                    type: "error",
-                    message: "Something went wrong while sending your request. Please try again."
-                })
-            ), 3000)
+            setStatus({
+                type: "error",
+                message: "Something went wrong while sending your request. Please try again."
+            })
+
         }
         return
     }
@@ -210,7 +209,7 @@ const Booking_fitting = () => {
             <CurrentCard
                 formData={formData}
                 handleChange={handleChange}
-                handleSubmit={handleSubmit}
+
             />
             {/* navigation next and prev  */}
 
@@ -254,7 +253,8 @@ const Booking_fitting = () => {
                 {currentStep === cards.length - 1 ? (
 
                     <button
-                        type="submit"
+                        type="button"
+                        onClick={handleSubmit}
                         disabled={status.type === 'success'}
                         className={`
                         px-8 py-3
@@ -322,4 +322,4 @@ const Booking_fitting = () => {
     )
 }
 
-export default Booking_fitting
+export default Booking_course

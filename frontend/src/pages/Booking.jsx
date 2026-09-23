@@ -6,10 +6,12 @@ import Booking_collaboration from '../contents/booking/Booking_collaboration'
 import Navbar_booking from '../contents/booking/Navbar_booking'
 import About_fitting from '../contents/booking/About_fitting'
 import About_course from '../contents/booking/About_course'
+import About_collaboration from '../contents/booking/About_collaboration'
+import Footer_booking from '../layout/Footer_booking'
 
 const Booking = () => {
   return (
-    <div>
+    <div className='pd-1020'>
       <Navbar_booking />
       <main>
         <Booking_hero />
@@ -17,8 +19,10 @@ const Booking = () => {
         <Booking_fitting />
         <About_course />
         <Booking_course />
+        <About_collaboration />
         <Booking_collaboration />
       </main>
+      <Footer_booking />
     </div>
   )
 }

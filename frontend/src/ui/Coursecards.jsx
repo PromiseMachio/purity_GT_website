@@ -110,24 +110,24 @@ export const About_youcourse = ({ formData, handleChange }) => {
             <div className='space-y-6 relative z-10'>
 
                 <div>
-                    <label htmlFor="names" className='block text-sm font-medium text-amber-400 paragraph-font mb-2 tracking-wide'>
+                    <label htmlFor="namess" className='block text-sm font-medium text-amber-400 paragraph-font mb-2 tracking-wide'>
                         Names
                     </label>
-                    <input type="text" id='names' name='names' className='w-full px-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder-white/30 outline-none focus:border-amber-500/60 focus:ring-2 focus:ring-amber-500/10 hover:border-white/20 transition-all duration-300' placeholder='Alan Doe' value={formData.names} onChange={handleChange} />
+                    <input type="text" id='namess' name='namess' className='w-full px-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder-white/30 outline-none focus:border-amber-500/60 focus:ring-2 focus:ring-amber-500/10 hover:border-white/20 transition-all duration-300' placeholder='Alan Doe' value={formData.namess} onChange={handleChange} />
                 </div>
 
                 <div>
-                    <label htmlFor="phone" className='block text-sm font-medium text-amber-400 paragraph-font mb-2 tracking-wide'>
+                    <label htmlFor="phonee" className='block text-sm font-medium text-amber-400 paragraph-font mb-2 tracking-wide'>
                         Phone Number
                     </label>
-                    <input type="text" id='phone' name='phone' className='w-full px-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder-white/30 outline-none focus:border-amber-500/60 focus:ring-2 focus:ring-amber-500/10 hover:border-white/20 transition-all duration-300' placeholder='+254 7XX XXX XXX' min='10' max='13' value={formData.phone} onChange={handleChange} />
+                    <input type="text" id='phonee' name='phonee' className='w-full px-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder-white/30 outline-none focus:border-amber-500/60 focus:ring-2 focus:ring-amber-500/10 hover:border-white/20 transition-all duration-300' placeholder='+254 7XX XXX XXX' min='10' max='13' value={formData.phonee} onChange={handleChange} />
                 </div>
 
                 <div>
-                    <label htmlFor="email" className='block text-sm font-medium text-amber-400 paragraph-font mb-2 tracking-wide'>
+                    <label htmlFor="emaill" className='block text-sm font-medium text-amber-400 paragraph-font mb-2 tracking-wide'>
                         Email <span className='text-xs text-white/30 fashion-font ml-1'>optional</span>
                     </label>
-                    <input type="email" id='email' name='email' className='w-full px-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder-white/30 outline-none focus:border-amber-500/60 focus:ring-2 focus:ring-amber-500/10 hover:border-white/20 transition-all duration-300' placeholder='Type your email...' value={formData.email} onChange={handleChange} />
+                    <input type="email" id='emaill' name='emaill' className='w-full px-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder-white/30 outline-none focus:border-amber-500/60 focus:ring-2 focus:ring-amber-500/10 hover:border-white/20 transition-all duration-300' placeholder='Type your email...' value={formData.emaill} onChange={handleChange} />
                 </div>
 
                 <div className='flex flex-col lg:flex-row lg:items-end gap-6 lg:gap-10 pt-2'>
@@ -168,14 +168,7 @@ export const About_youcourse = ({ formData, handleChange }) => {
     )
 }
 
-
-
-
-
-
-
-
-export const Intrest = ({ formData, setFormData, handleChange }) => {
+export const Intrest = ({ formData,  handleChange }) => {
 
     return (
         <div className='bg-black/20 backdrop-blur-xl border border-white/10 p-6 sm:p-8 lg:p-10 rounded-3xl shadow-2xl shadow-black/30 relative overflow-hidden'>
@@ -354,12 +347,12 @@ export const Intrest = ({ formData, setFormData, handleChange }) => {
                             <div className='flex flex-wrap items-center gap-3'>
 
                                 <label htmlFor='yess' className='group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-white/10 bg-white/[0.03] text-gray-300 cursor-pointer transition-all duration-300 hover:border-amber-500/40 hover:bg-amber-500/10 hover:text-white'>
-                                    <input type='radio' id='yess' name='fashionExperience' value='yess' checked={formData.fashionExperience === 'yess'} onChange={handleChange} className='w-4 h-4 accent-amber-500 cursor-pointer' />
+                                    <input type='radio' id='yess' name='fashionExperience' value='Yes' checked={formData.fashionExperience === 'Yes'} onChange={handleChange} className='w-4 h-4 accent-amber-500 cursor-pointer' />
                                     Yes
                                 </label>
 
                                 <label htmlFor='noo' className='group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-white/10 bg-white/[0.03] text-gray-300 cursor-pointer transition-all duration-300 hover:border-amber-500/40 hover:bg-amber-500/10 hover:text-white'>
-                                    <input type='radio' id='noo' name='fashionExperience' value='noo' checked={formData.fashionExperience === 'noo'} onChange={handleChange} className='w-4 h-4 accent-amber-500 cursor-pointer' />
+                                    <input type='radio' id='noo' name='fashionExperience' value='No' checked={formData.fashionExperience === 'No'} onChange={handleChange} className='w-4 h-4 accent-amber-500 cursor-pointer' />
                                     No
                                 </label>
                             </div>
@@ -455,8 +448,8 @@ export const Learning = ({ formData, handleChange }) => {
                             <span className='paragraph-font tracking-wide'>Weekends</span>
                         </label>
 
-                        <label htmlFor='flexible' className='group flex items-center gap-2 px-5 py-3 rounded-xl border border-white/10 bg-white/[0.03] text-gray-300 cursor-pointer whitespace-nowrap transition-all duration-300 hover:border-amber-500/50 hover:bg-amber-500/10 hover:text-white hover:shadow-lg hover:shadow-amber-500/5'>
-                            <input type='radio' id='flexible' name='schedule' value='flexible' checked={formData.schedule === 'flexible'} onChange={handleChange} className='w-4 h-4 accent-amber-500 cursor-pointer shrink-0' />
+                        <label htmlFor='flexiblee' className='group flex items-center gap-2 px-5 py-3 rounded-xl border border-white/10 bg-white/[0.03] text-gray-300 cursor-pointer whitespace-nowrap transition-all duration-300 hover:border-amber-500/50 hover:bg-amber-500/10 hover:text-white hover:shadow-lg hover:shadow-amber-500/5'>
+                            <input type='radio' id='flexiblee' name='schedule' value='flexiblee' checked={formData.schedule === 'flexiblee'} onChange={handleChange} className='w-4 h-4 accent-amber-500 cursor-pointer shrink-0' />
                             <span className='paragraph-font tracking-wide'>Flexible</span>
                         </label>
 

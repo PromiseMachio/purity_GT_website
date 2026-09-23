@@ -3,6 +3,7 @@ import manImge1 from '../assets/bookings/bookingImage1.png'
 import studentImage from '../assets/bookings/studentImage1.png'
 import collaboImage from '../assets/bookings/collaboratorsImage1.png'
 import courseQuoteImg from '../assets/sectionBackgroundImg2.png'
+import collaborationQuoteImg from '../assets/collaborationQouteBgImg.png'
 export const HERO_BOOKING = {
     name: 'BEGIN YOUR JOURNEY',
 
@@ -16,6 +17,7 @@ export const HERO_BOOKING = {
     image3: studentImage,
     image4: collaboImage,
     image5: courseQuoteImg,
+    image6: collaborationQuoteImg,
 
     imageAlt: 'Purity fashion design and tailoring',
 
@@ -549,7 +551,7 @@ export const COURSE = {
                 options: [
                     'Physical',
                     'Online',
-                    'Either',
+                    'Hybrid',
                 ],
                 required: true,
             },
@@ -623,319 +625,316 @@ export const COURSE = {
 
 export const COLLABORATION = {
     id: '03',
-
     name: 'FASHION COLLABORATION',
-
     tagline: 'Your vision. Our craft. Let’s create together.',
 
     intro:
         'Have a fashion collection, creative project, brand collaboration or unique idea in mind? Tell us about your vision and let’s explore how Purity can bring it to life through thoughtful design and craftsmanship.',
 
-    steps: [
-        {
-            id: '01',
-            name: 'ABOUT YOU',
-            title: 'Tell Us About You',
-            description:
-                'Start with a few details about yourself or your organisation so we can understand who we will be collaborating with.',
+    aboutYou: {
+        id: '01',
+        name: 'ABOUT YOU',
+        title: 'Tell Us About You',
 
-            fields: [
-                {
-                    name: 'firstName',
-                    label: 'First Name',
-                    type: 'text',
-                    placeholder: 'Enter your first name',
-                    required: true,
-                },
-                {
-                    name: 'lastName',
-                    label: 'Last Name',
-                    type: 'text',
-                    placeholder: 'Enter your last name',
-                    required: true,
-                },
-                {
-                    name: 'email',
-                    label: 'Email Address',
-                    type: 'email',
-                    placeholder: 'you@example.com',
-                    required: true,
-                },
-                {
-                    name: 'phone',
-                    label: 'Phone Number',
-                    type: 'tel',
-                    placeholder: '+254 7XX XXX XXX',
-                    required: true,
-                },
-                {
-                    name: 'organisation',
-                    label: 'Brand / Organisation',
-                    type: 'text',
-                    placeholder: 'Enter your brand or organisation name',
-                    required: false,
-                },
-            ],
-        },
+        description:
+            'Start with a few details about yourself or your organisation so we can understand who we will be collaborating with.',
 
-        {
-            id: '02',
-            name: 'PROJECT TYPE',
-            title: 'What Are We Creating Together?',
-            description:
-                'Tell us what kind of collaboration you have in mind so we can better understand your project.',
+        fields: [
+            {
+                name: 'firstName',
+                label: 'First Name',
+                type: 'text',
+                placeholder: 'Enter your first name',
+                required: true,
+            },
+            {
+                name: 'email',
+                label: 'Email Address',
+                type: 'email',
+                placeholder: 'you@example.com',
+                required: true,
+            },
+            {
+                name: 'phone',
+                label: 'Phone Number',
+                type: 'tel',
+                placeholder: '+254 7XX XXX XXX',
+                required: true,
+            },
+            {
+                name: 'organisation',
+                label: 'Brand / Organisation',
+                type: 'text',
+                placeholder: 'Enter your brand or organisation name',
+                required: false,
+            },
+        ],
+    },
 
-            fields: [
-                {
-                    name: 'projectType',
-                    label: 'Project Type',
-                    type: 'select',
-                    placeholder: 'Choose a project type',
-                    options: [
-                        'Fashion Collection',
-                        'Brand Collaboration',
-                        'Creative Project',
-                        'Bespoke Collection',
-                        'Editorial / Photoshoot',
-                        'Fashion Show',
-                        'Event / Special Project',
-                        'Costume Design',
-                        'Other',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'collaborationRole',
-                    label: 'How Would You Like Purity To Be Involved?',
-                    type: 'select',
-                    placeholder: 'Choose how we can collaborate',
-                    options: [
-                        'Design',
-                        'Pattern Making',
-                        'Tailoring',
-                        'Garment Production',
-                        'Creative Direction',
-                        'Design & Production',
-                        'Full Project Collaboration',
-                        'Other',
-                    ],
-                    required: true,
-                },
-            ],
-        },
+    projectType: {
+        id: '02',
+        name: 'PROJECT TYPE',
+        title: 'What Are We Creating Together?',
 
-        {
-            id: '03',
-            name: 'YOUR VISION',
-            title: 'Tell Us About Your Idea',
-            description:
-                'Share your concept, inspiration and what you would like to create together.',
+        description:
+            'Tell us what kind of collaboration you have in mind so we can better understand your project.',
 
-            fields: [
-                {
-                    name: 'projectName',
-                    label: 'Project / Collection Name',
-                    type: 'text',
-                    placeholder: 'What would you like to call the project?',
-                    required: false,
-                },
-                {
-                    name: 'projectDescription',
-                    label: 'Describe Your Vision',
-                    type: 'textarea',
-                    placeholder:
-                        'Tell us about your concept, inspiration, story, aesthetic or creative direction...',
-                    required: true,
-                },
-                {
-                    name: 'targetAudience',
-                    label: 'Target Audience',
-                    type: 'text',
-                    placeholder:
-                        'Who is the collection or project intended for?',
-                    required: false,
-                },
-                {
-                    name: 'numberOfPieces',
-                    label: 'Estimated Number of Pieces',
-                    type: 'number',
-                    placeholder: 'e.g. 10',
-                    required: false,
-                },
-            ],
-        },
+        fields: [
+            {
+                name: 'projectType',
+                label: 'Project Type',
+                type: 'select',
+                placeholder: 'Choose a project type',
+                options: [
+                    'Fashion Collection',
+                    'Brand Collaboration',
+                    'Creative Project',
+                    'Bespoke Collection',
+                    'Editorial / Photoshoot',
+                    'Fashion Show',
+                    'Event / Special Project',
+                    'Costume Design',
+                    'Other',
+                ],
+                required: true,
+            },
+            {
+                name: 'collaborationRole',
+                label: 'How Would You Like Purity To Be Involved?',
+                type: 'select',
+                placeholder: 'Choose how we can collaborate',
+                options: [
+                    'Design',
+                    'Pattern Making',
+                    'Tailoring',
+                    'Garment Production',
+                    'Creative Direction',
+                    'Design & Production',
+                    'Full Project Collaboration',
+                    'Other',
+                ],
+                required: true,
+            },
+        ],
+    },
 
-        {
-            id: '04',
-            name: 'DESIGN DETAILS',
-            title: 'Let’s Talk About The Details',
-            description:
-                'Give us an idea of the design direction, materials and aesthetic you have in mind.',
+    vision: {
+        id: '03',
+        name: 'YOUR VISION',
+        title: 'Tell Us About Your Idea',
 
-            fields: [
-                {
-                    name: 'garmentTypes',
-                    label: 'Garment Types',
-                    type: 'multiselect',
-                    options: [
-                        'Dresses',
-                        'Evening Gowns',
-                        'Ankara Wear',
-                        'Two-Piece Sets',
-                        'Suits',
-                        'Formal Wear',
-                        'Casual Wear',
-                        'Bespoke Wear',
-                        'Accessories',
-                        'Other',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'preferredFabric',
-                    label: 'Preferred Fabric / Materials',
-                    type: 'text',
-                    placeholder:
-                        'e.g. Ankara, cotton, satin, silk, chiffon...',
-                    required: false,
-                },
-                {
-                    name: 'colourPalette',
-                    label: 'Preferred Colour Palette',
-                    type: 'text',
-                    placeholder:
-                        'Tell us about the colours you have in mind',
-                    required: false,
-                },
-                {
-                    name: 'designStyle',
-                    label: 'Design Style / Aesthetic',
-                    type: 'textarea',
-                    placeholder:
-                        'Describe the style, mood or aesthetic you would like to achieve...',
-                    required: false,
-                },
-            ],
-        },
+        description:
+            'Share your concept, inspiration and what you would like to create together.',
 
-        {
-            id: '05',
-            name: 'INSPIRATION',
-            title: 'Share Your Inspiration',
-            description:
-                'Upload reference images, sketches, moodboards or other materials that can help us understand your creative direction.',
+        fields: [
+            {
+                name: 'projectName',
+                label: 'Project / Collection Name',
+                type: 'text',
+                placeholder: 'What would you like to call the project?',
+                required: false,
+            },
+            {
+                name: 'projectDescription',
+                label: 'Describe Your Vision',
+                type: 'textarea',
+                placeholder:
+                    'Tell us about your concept, inspiration, story, aesthetic or creative direction...',
+                required: true,
+            },
+            {
+                name: 'targetAudience',
+                label: 'Target Audience',
+                type: 'text',
+                placeholder:
+                    'Who is the collection or project intended for?',
+                required: false,
+            },
+            {
+                name: 'numberOfPieces',
+                label: 'Estimated Number of Pieces',
+                type: 'number',
+                placeholder: 'e.g. 10',
+                required: false,
+            },
+        ],
+    },
 
-            fields: [
-                {
-                    name: 'referenceImages',
-                    label: 'Upload Inspiration',
-                    type: 'file',
-                    accept: 'image/*,.pdf',
-                    multiple: true,
-                    required: false,
-                },
-                {
-                    name: 'referenceLinks',
-                    label: 'Reference Links',
-                    type: 'text',
-                    placeholder:
-                        'Paste a website, Pinterest, Instagram or other reference link',
-                    required: false,
-                },
-                {
-                    name: 'additionalNotes',
-                    label: 'Additional Notes',
-                    type: 'textarea',
-                    placeholder:
-                        'Anything else you would like us to know about the project?',
-                    required: false,
-                },
-            ],
-        },
+    designDetails: {
+        id: '03',
+        name: 'DESIGN DETAILS',
+        title: 'Let’s Talk About The Details',
 
-        {
-            id: '06',
-            name: 'TIMELINE & BUDGET',
-            title: 'Project Timeline',
-            description:
-                'Understanding your timeline and budget helps us determine how we can best support your project.',
+        description:
+            'Give us an idea of the design direction, materials and aesthetic you have in mind.',
 
-            fields: [
-                {
-                    name: 'projectStartDate',
-                    label: 'Preferred Start Date',
-                    type: 'date',
-                    required: false,
-                },
-                {
-                    name: 'deadline',
-                    label: 'Desired Completion Date',
-                    type: 'date',
-                    required: false,
-                },
-                {
-                    name: 'budgetRange',
-                    label: 'Estimated Budget',
-                    type: 'select',
-                    placeholder: 'Choose a budget range',
-                    options: [
-                        'Under KES 50,000',
-                        'KES 50,000 – 100,000',
-                        'KES 100,000 – 250,000',
-                        'KES 250,000 – 500,000',
-                        'KES 500,000+',
-                        'Not Yet Decided',
-                    ],
-                    required: false,
-                },
-            ],
-        },
+        fields: [
+            {
+                name: 'garmentTypes',
+                label: 'Garment Types',
+                type: 'multiselect',
+                options: [
+                    'Dresses',
+                    'Evening Gowns',
+                    'Ankara Wear',
+                    'Two-Piece Sets',
+                    'Suits',
+                    'Formal Wear',
+                    'Casual Wear',
+                    'Bespoke Wear',
+                    'Accessories',
+                    'Other',
+                ],
+                required: true,
+            },
+            {
+                name: 'preferredFabric',
+                label: 'Preferred Fabric / Materials',
+                type: 'text',
+                placeholder:
+                    'e.g. Ankara, cotton, satin, silk, chiffon...',
+                required: false,
+            },
+            {
+                name: 'colourPalette',
+                label: 'Preferred Colour Palette',
+                type: 'text',
+                placeholder:
+                    'Tell us about the colours you have in mind',
+                required: false,
+            },
+            {
+                name: 'designStyle',
+                label: 'Design Style / Aesthetic',
+                type: 'textarea',
+                placeholder:
+                    'Describe the style, mood or aesthetic you would like to achieve...',
+                required: false,
+            },
+        ],
+    },
 
-        {
-            id: '07',
-            name: 'CONSULTATION',
-            title: 'Let’s Talk',
-            description:
-                'Choose how you would prefer to discuss your collaboration with the Purity team.',
+    inspiration: {
+        id: '05',
+        name: 'INSPIRATION',
+        title: 'Share Your Inspiration',
 
-            fields: [
-                {
-                    name: 'preferredContactMethod',
-                    label: 'Preferred Contact Method',
-                    type: 'select',
-                    placeholder: 'How should we contact you?',
-                    options: [
-                        'WhatsApp',
-                        'Phone Call',
-                        'Email',
-                    ],
-                    required: true,
-                },
-                {
-                    name: 'preferredDate',
-                    label: 'Preferred Consultation Date',
-                    type: 'date',
-                    required: false,
-                },
-                {
-                    name: 'preferredTime',
-                    label: 'Preferred Time',
-                    type: 'select',
-                    placeholder: 'Select a preferred time',
-                    options: [
-                        'Morning',
-                        'Afternoon',
-                        'Evening',
-                        'Flexible',
-                    ],
-                    required: false,
-                },
-            ],
-        },
-    ],
+        description:
+            'Upload reference images, sketches, moodboards or other materials that can help us understand your creative direction.',
+
+        fields: [
+            {
+                name: 'referenceImages',
+                label: 'Upload Inspiration',
+                type: 'file',
+                accept: 'image/*,.pdf',
+                multiple: true,
+                required: false,
+            },
+            {
+                name: 'referenceLinks',
+                label: 'Reference Links',
+                type: 'text',
+                placeholder:
+                    'Paste a website, Pinterest, Instagram or other reference link',
+                required: false,
+            },
+            {
+                name: 'additionalNotes',
+                label: 'Additional Notes',
+                type: 'textarea',
+                placeholder:
+                    'Anything else you would like us to know about the project?',
+                required: false,
+            },
+        ],
+    },
+
+    timelineBudget: {
+        id: '04',
+        name: 'TIMELINE & BUDGET',
+        title: 'Project Timeline',
+
+        description:
+            'Understanding your timeline and budget helps us determine how we can best support your project.',
+
+        fields: [
+            {
+                name: 'projectStartDate',
+                label: 'Preferred Start Date',
+                type: 'date',
+                required: false,
+            },
+            {
+                name: 'deadline',
+                label: 'Desired Completion Date',
+                type: 'date',
+                required: false,
+            },
+            {
+                name: 'budgetRange',
+                label: 'Estimated Budget',
+                type: 'select',
+                placeholder: 'Choose a budget range',
+                options: [
+                    'Under KES 50,000',
+                    'KES 50,000 – 100,000',
+                    'KES 100,000 – 250,000',
+                    'KES 250,000 – 500,000',
+                    'KES 500,000+',
+                    'Not Yet Decided',
+                ],
+                required: false,
+            },
+        ],
+    },
+
+    consultation: {
+        id: '07',
+        name: 'CONSULTATION',
+        title: 'Let’s Talk',
+
+        description:
+            'Choose how you would prefer to discuss your collaboration with the Purity team.',
+
+        fields: [
+            {
+                name: 'preferredContactMethod',
+                label: 'Preferred Contact Method',
+                type: 'select',
+                placeholder: 'How should we contact you?',
+                options: [
+                    'WhatsApp',
+                    'Phone Call',
+                    'Email',
+                ],
+                required: true,
+            },
+            {
+                name: 'preferredDate',
+                label: 'Preferred Consultation Date',
+                type: 'date',
+                required: false,
+            },
+            {
+                name: 'preferredTime',
+                label: 'Preferred Time',
+                type: 'select',
+                placeholder: 'Select a preferred time',
+                options: [
+                    'Morning',
+                    'Afternoon',
+                    'Evening',
+                    'Flexible',
+                ],
+                required: false,
+            },
+        ],
+    },
 
     review: {
         title: 'REVIEW YOUR COLLABORATION REQUEST',
+
         description:
             'Take a moment to review your project details before sending your collaboration request. Our team will review your vision and get in touch to discuss the possibilities, timeline and next steps.',
 
@@ -952,4 +951,4 @@ export const COLLABORATION = {
 
         buttonText: 'BACK TO BOOKING',
     },
-};
+}

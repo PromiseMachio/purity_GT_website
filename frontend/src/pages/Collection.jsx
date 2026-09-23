@@ -9,11 +9,12 @@ import Services from '../pages/Services'
 import Home from '../pages/Home'
 import Booking from '../pages/Booking'
 import Footer_collection from '../layout/Footer_collection'
+import Navbar_collection from '../layout/Navbar_collection'
 
 const Collection = () => {
   return (
     <div>
-      <Colnavbar />
+      <Navbar_collection />
       <main className='pb-[10vh] lg:pb-[1vh]'>
         <Colhero />
         <Colgallery />

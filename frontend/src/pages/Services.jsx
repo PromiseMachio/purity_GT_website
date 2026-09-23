@@ -4,10 +4,11 @@ import Colnavbar from '../contents/collection/Colnavbar'
 import Servcontent from '../contents/services/Servcontent'
 import Footer from '../layout/Footer'
 import Footer_services from '../layout/Footer_services'
+import Navbar_services from '../layout/Navbar_services'
 const Services = () => {
   return (
     <div>
-      <Colnavbar />
+      <Navbar_services/>
       <main>
         <Servhero />
         <Servcontent />
